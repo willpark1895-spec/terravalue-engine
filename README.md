@@ -26,6 +26,8 @@ Requires Node 18 or later.
 
 ## Usage — Node.js
 
+> **Known docs bug (fix in v1.0.1):** the example below references `result.services.carbon.annualValue`. The actual field name on the returned object is `result.services.carbon.value`. The engine itself works correctly — only these README examples are wrong. Tracked for the next release.
+
 ```js
 const TerraValueEngine = require('@phloemxylem/terravalue-engine');
 
