@@ -1,0 +1,64 @@
+{
+  "_version": "1.0.0",
+  "_description": "Ecosystem service values — per canopy-acre per year",
+  "_sources": [
+    "Carbon: EPA SC-GHG 2023 ($190/tonne CO2, 2% near-term) × 2.6 t/acre/yr (Atlanta iTree Eco 2014)",
+    "Stormwater: Benefit transfer from USDA CUFR / iTree Eco literature",
+    "Air quality: Nowak et al. 2014, total pollutant removal value (PM2.5/O3/NO2/SO2)",
+    "Energy: McPherson 2003, Atlanta iTree Eco — 1,800 kWh/acre/yr × $0.14/kWh",
+    "Habitat: Benefit transfer from ecosystem services literature — $320/acre canopy",
+    "Property: Kovacs et al. 2022 — ~7% premium (applied to market value, capped at 12%)"
+  ],
+
+  "carbon": {
+    "label": "Carbon Sequestration",
+    "ratePerCanopyAcre": 494,
+    "unit": "$/canopy-acre/yr",
+    "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+    "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+    "co2PerAcre": 2.6,
+    "socialCostCarbon": 190
+  },
+  "stormwater": {
+    "label": "Stormwater Management",
+    "ratePerCanopyAcre": 520,
+    "unit": "$/canopy-acre/yr",
+    "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+    "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+    "interceptionRate": 0.35,
+    "costPer1000Gal": 4.00
+  },
+  "airQuality": {
+    "label": "Air Quality Improvement",
+    "ratePerCanopyAcre": 418,
+    "unit": "$/canopy-acre/yr",
+    "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+    "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+    "pm25ValuePerTon": 117106
+  },
+  "energy": {
+    "label": "Energy Savings",
+    "ratePerCanopyAcre": 252,
+    "unit": "$/canopy-acre/yr",
+    "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+    "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+    "kwhPerAcre": 1800,
+    "coolingReductionPct": 0.30,
+    "heatingPenaltyPct": 0.05
+  },
+  "habitat": {
+    "label": "Habitat Value",
+    "ratePerCanopyAcre": 320,
+    "unit": "$/canopy-acre/yr",
+    "methodology": "Benefit transfer from ecosystem services valuation literature",
+    "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+    "wtpPerAcre": 320
+  },
+  "propertyPremium": {
+    "label": "Property Value Premium",
+    "premiumPct": 0.07,
+    "unit": "% of market value",
+    "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+    "source": "Kovacs et al. 2022; Netusil et al. 2014"
+  }
+}

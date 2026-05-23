@@ -1,0 +1,98 @@
+{
+  "_version": "1.0.0",
+  "_description": "Institutional land valuation constants — USPAP-compliant three-approach methodology",
+  "_sources": [
+    "JLL (Jones Lang LaSalle) Valuation Advisory",
+    "Berkshire Hathaway HomeServices CMA methodology",
+    "USPAP Standards 1 & 2",
+    "Appraisal Institute (MAI designation standards)"
+  ],
+
+  "capRates": {
+    "singleFamily":  { "low": 0.040, "mid": 0.055, "high": 0.070, "source": "Estimated range based on CBRE/JLL survey data" },
+    "multifamily":   { "low": 0.045, "mid": 0.055, "high": 0.065, "source": "Estimated range based on JLL multifamily data" },
+    "retail":        { "low": 0.055, "mid": 0.070, "high": 0.090, "source": "Estimated range based on JLL retail data" },
+    "office":        { "low": 0.060, "mid": 0.075, "high": 0.095, "source": "Estimated range based on JLL office data" },
+    "industrial":    { "low": 0.045, "mid": 0.060, "high": 0.075, "source": "Estimated range based on JLL industrial data" },
+    "mixedUse":      { "low": 0.050, "mid": 0.065, "high": 0.080, "source": "Estimated range based on CBRE mixed-use data" },
+    "vacantLand":    { "low": 0.020, "mid": 0.035, "high": 0.060, "source": "Estimated range based on appraisal practice" }
+  },
+
+  "discountRates": {
+    "singleFamily":  { "low": 0.070, "mid": 0.085, "high": 0.100 },
+    "multifamily":   { "low": 0.075, "mid": 0.090, "high": 0.110 },
+    "retail":        { "low": 0.085, "mid": 0.100, "high": 0.130 },
+    "office":        { "low": 0.085, "mid": 0.105, "high": 0.140 },
+    "industrial":    { "low": 0.070, "mid": 0.090, "high": 0.110 },
+    "mixedUse":      { "low": 0.080, "mid": 0.095, "high": 0.120 },
+    "vacantLand":    { "low": 0.080, "mid": 0.100, "high": 0.140 }
+  },
+
+  "georgia": {
+    "assessmentRatio": 0.40,
+    "avgMillageRate": 0.030,
+    "homesteadExemption": 10000,
+    "transferTaxRate": 0.001,
+    "intangibleTaxRate": 0.003
+  },
+
+  "constructionCosts": {
+    "residential": { "perSqFt": { "low": 125, "mid": 175, "high": 275 }, "source": "Estimated range based on RS Means Southeast benchmarks" },
+    "commercial":  { "perSqFt": { "low": 150, "mid": 225, "high": 400 }, "source": "Estimated range based on RS Means Southeast benchmarks" },
+    "industrial":  { "perSqFt": { "low": 85,  "mid": 130, "high": 200 }, "source": "Estimated range based on RS Means Southeast benchmarks" }
+  },
+
+  "depreciation": {
+    "physical": {
+      "residential": { "effectiveLife": 50, "residualPct": 0.15 },
+      "commercial":  { "effectiveLife": 45, "residualPct": 0.10 },
+      "industrial":  { "effectiveLife": 40, "residualPct": 0.10 }
+    },
+    "functional": {
+      "noDeficiency": 0.00,
+      "minor": 0.05,
+      "moderate": 0.10,
+      "major": 0.20
+    },
+    "external": {
+      "none": 0.00,
+      "mild": 0.05,
+      "moderate": 0.10,
+      "severe": 0.20
+    }
+  },
+
+  "landToValueRatio": {
+    "singleFamily": { "low": 0.15, "mid": 0.25, "high": 0.45 },
+    "multifamily":  { "low": 0.10, "mid": 0.20, "high": 0.35 },
+    "commercial":   { "low": 0.15, "mid": 0.30, "high": 0.50 },
+    "industrial":   { "low": 0.20, "mid": 0.35, "high": 0.55 }
+  },
+
+  "appreciation": {
+    "atlanta":  { "1yr": 0.038, "5yr": 0.052, "10yr": 0.045, "source": "FHFA HPI Atlanta metro (approximate long-term averages)" },
+    "national": { "1yr": 0.035, "5yr": 0.048, "10yr": 0.040, "source": "FHFA US All-Transactions HPI (approximate long-term averages)" }
+  },
+
+  "comparableAdjustments": {
+    "locationSuperior":      -0.05,
+    "locationInferior":       0.05,
+    "conditionSuperior":     -0.03,
+    "conditionInferior":      0.03,
+    "sizeLarger10pct":       -0.015,
+    "sizeSmaller10pct":       0.015,
+    "ageNewer5yr":           -0.01,
+    "ageOlder5yr":            0.01,
+    "canopyPremiumPer10pct":  0.017,
+    "lotSizePremium":         0.01
+  },
+
+  "ecosystemPremium": {
+    "canopyValuePer1Pct": 0.0017,
+    "matureTreePremium": 0.07,
+    "optimalCanopy": 30,
+    "maxPremium": 0.12,
+    "annualServicesPerCanopyAcre": 2004,
+    "source": "P&X TerraValue methodology v1.0 + peer-reviewed coefficients"
+  }
+}

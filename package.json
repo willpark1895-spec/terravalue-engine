@@ -1,0 +1,67 @@
+{
+  "name": "@phloemxylem/terravalue-engine",
+  "version": "1.0.0",
+  "description": "Parcel-level ecosystem services and land valuation engine. Built by P&X — Phloem & Xylem.",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "William Park",
+    "email": "willpark.1895@gmail.com",
+    "url": "https://pxconsulting.io"
+  },
+  "homepage": "https://github.com/willpark1895-spec/terravalue-engine#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willpark1895-spec/terravalue-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willpark1895-spec/terravalue-engine/issues"
+  },
+  "keywords": [
+    "terravalue",
+    "ecosystem-services",
+    "urban-forestry",
+    "land-valuation",
+    "avm",
+    "carbon-sequestration",
+    "stormwater",
+    "canopy"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "default": "./lib/index.js"
+    },
+    "./raw": {
+      "require": "./lib/terravalue-engine.js",
+      "default": "./lib/terravalue-engine.js"
+    },
+    "./validate": {
+      "require": "./lib/validate.js",
+      "default": "./lib/validate.js"
+    },
+    "./browser": "./dist/terravalue-engine.browser.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "config/",
+    "dist/",
+    "README.md"
+  ],
+  "scripts": {
+    "build:browser": "node tools/generate-browser-bundle.js",
+    "test": "node --test tests/golden-parity.test.js tests/test-validation.js",
+    "test:parity": "node --test tests/golden-parity.test.js",
+    "test:validation": "node --test tests/test-validation.js",
+    "snapshots:regenerate": "node tests/generate-snapshots.js",
+    "prepublishOnly": "npm run build:browser && npm test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

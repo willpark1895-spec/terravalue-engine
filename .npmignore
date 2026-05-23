@@ -1,0 +1,13 @@
+# What ships to npm — see package.json "files" for the inclusion allow-list.
+# Everything below is excluded from the published tarball.
+
+tests/
+tools/
+.gitignore
+.npmignore
+.github/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+node_modules/

@@ -1,0 +1,297 @@
+{
+  "_version": "1.0.0",
+  "_description": "Green building certification requirements — real credit structures with trackable metrics",
+
+  "leed": {
+    "name": "LEED v4.1",
+    "fullName": "Leadership in Energy and Environmental Design",
+    "organization": "U.S. Green Building Council (USGBC)",
+    "totalPoints": 110,
+    "levels": [
+      { "name": "Certified", "min": 40, "max": 49 },
+      { "name": "Silver", "min": 50, "max": 59 },
+      { "name": "Gold", "min": 60, "max": 79 },
+      { "name": "Platinum", "min": 80, "max": 110 }
+    ],
+    "greenInfraCredits": [
+      {
+        "id": "SS-P1",
+        "category": "Sustainable Sites",
+        "name": "Construction Activity Pollution Prevention",
+        "type": "prerequisite",
+        "points": 0,
+        "required": true,
+        "description": "Erosion and sedimentation control plan for all construction activities",
+        "canopyRelevance": "high",
+        "metrics": ["erosion_control_plan", "sediment_barriers", "stabilization_timeline"]
+      },
+      {
+        "id": "SS-C2",
+        "category": "Sustainable Sites",
+        "name": "Site Development — Protect or Restore Habitat",
+        "type": "credit",
+        "points": 2,
+        "required": false,
+        "description": "Conserve existing natural areas and restore damaged areas with native/adapted vegetation",
+        "canopyRelevance": "high",
+        "metrics": ["native_vegetation_pct", "restored_area_sqft", "greenfield_protection_pct"],
+        "thresholds": {
+          "option1": "Protect/restore ≥ 40% of site (excl. building footprint) with native vegetation",
+          "option2": "Provide $0.40/sqft for off-site habitat protection via accredited land trust"
+        }
+      },
+      {
+        "id": "SS-C4",
+        "category": "Sustainable Sites",
+        "name": "Rainwater Management",
+        "type": "credit",
+        "points": 3,
+        "required": false,
+        "description": "Manage on-site rainwater to reduce runoff volume and improve water quality",
+        "canopyRelevance": "high",
+        "metrics": ["percentile_storm_managed", "runoff_volume_reduction_pct", "gi_area_sqft"],
+        "thresholds": {
+          "1pt": "Manage 80th percentile rainfall event on-site",
+          "2pt": "Manage 85th percentile rainfall event on-site",
+          "3pt": "Manage 90th or 95th percentile (varies by region)"
+        }
+      },
+      {
+        "id": "SS-C5",
+        "category": "Sustainable Sites",
+        "name": "Heat Island Reduction",
+        "type": "credit",
+        "points": 2,
+        "required": false,
+        "description": "Minimize effects on microclimates and human/wildlife habitats through canopy/materials",
+        "canopyRelevance": "high",
+        "metrics": ["canopy_coverage_pct", "sri_weighted_avg", "green_roof_pct"],
+        "thresholds": {
+          "nonroof": "Tree canopy within 10yr: ≥ 50% hardscape; or SRI ≥ 29 paving; or combination",
+          "roof": "Vegetated roof ≥ 75%; or SRI-compliant ≥ 75%; or combination"
+        }
+      },
+      {
+        "id": "SS-C6",
+        "category": "Sustainable Sites",
+        "name": "Light Pollution Reduction",
+        "type": "credit",
+        "points": 1,
+        "required": false,
+        "description": "Minimize light trespass, reduce sky-glow, and improve nighttime visibility",
+        "canopyRelevance": "low",
+        "metrics": ["blc_compliance", "uplight_ratio"]
+      },
+      {
+        "id": "EA-C2",
+        "category": "Energy & Atmosphere",
+        "name": "Optimize Energy Performance",
+        "type": "credit",
+        "points": 18,
+        "required": false,
+        "description": "Reduce energy cost through efficiency measures including passive design",
+        "canopyRelevance": "medium",
+        "metrics": ["energy_cost_reduction_pct", "cooling_load_reduction"],
+        "thresholds": {
+          "1pt": "6% new / 3% existing energy cost reduction",
+          "18pt": "50% new / 45% existing energy cost reduction"
+        }
+      }
+    ]
+  },
+
+  "breeam": {
+    "name": "BREEAM",
+    "fullName": "Building Research Establishment Environmental Assessment Methodology",
+    "organization": "BRE Group (UK)",
+    "totalCredits": "percentage-based",
+    "levels": [
+      { "name": "Pass", "min": 30 },
+      { "name": "Good", "min": 45 },
+      { "name": "Very Good", "min": 55 },
+      { "name": "Excellent", "min": 70 },
+      { "name": "Outstanding", "min": 85 }
+    ],
+    "greenInfraCredits": [
+      {
+        "id": "LE-01",
+        "category": "Land Use & Ecology",
+        "name": "Site Selection",
+        "type": "credit",
+        "credits": 2,
+        "description": "Encourage use of previously developed and/or contaminated land",
+        "canopyRelevance": "medium",
+        "metrics": ["previously_developed_pct", "contaminated_land_remediation"]
+      },
+      {
+        "id": "LE-02",
+        "category": "Land Use & Ecology",
+        "name": "Ecological Value of Site and Protection",
+        "type": "credit",
+        "credits": 2,
+        "description": "Assess and protect existing ecological value of the site",
+        "canopyRelevance": "high",
+        "metrics": ["ecological_survey_complete", "protected_features_list", "ecological_value_score"]
+      },
+      {
+        "id": "LE-03",
+        "category": "Land Use & Ecology",
+        "name": "Minimising Impact on Existing Site Ecology",
+        "type": "credit",
+        "credits": 2,
+        "description": "Minimize negative impact on existing site ecology",
+        "canopyRelevance": "high",
+        "metrics": ["tree_protection_plan", "root_protection_zones", "canopy_retention_pct"]
+      },
+      {
+        "id": "LE-04",
+        "category": "Land Use & Ecology",
+        "name": "Enhancement of Ecological Value",
+        "type": "credit",
+        "credits": 3,
+        "description": "Enhance the ecological value of the site — 10% Biodiversity Net Gain required (2024)",
+        "canopyRelevance": "high",
+        "metrics": ["biodiversity_net_gain_pct", "native_planting_area", "urban_greening_factor"],
+        "thresholds": {
+          "minimum": "10% Biodiversity Net Gain (BNG) — UK law since Feb 2024",
+          "ugf": "Urban Greening Factor ≥ 0.3 (London planning requirement)",
+          "3credits": "Significant net gain with long-term management plan"
+        }
+      },
+      {
+        "id": "LE-05",
+        "category": "Land Use & Ecology",
+        "name": "Long-term Biodiversity Management",
+        "type": "credit",
+        "credits": 2,
+        "description": "Long-term management and maintenance of site ecology",
+        "canopyRelevance": "high",
+        "metrics": ["management_plan_years", "monitoring_schedule", "responsible_party"]
+      }
+    ]
+  },
+
+  "well": {
+    "name": "WELL v2",
+    "fullName": "WELL Building Standard v2",
+    "organization": "International WELL Building Institute (IWBI)",
+    "totalPoints": 100,
+    "levels": [
+      { "name": "Bronze", "min": 40 },
+      { "name": "Silver", "min": 50 },
+      { "name": "Gold", "min": 60 },
+      { "name": "Platinum", "min": 80 }
+    ],
+    "greenInfraCredits": [
+      {
+        "id": "L06",
+        "category": "Light",
+        "name": "Visual Lighting Design",
+        "type": "optimization",
+        "points": 3,
+        "description": "Provide views to nature and daylight access",
+        "canopyRelevance": "medium",
+        "metrics": ["daylight_views_pct", "nature_views_pct"],
+        "thresholds": {
+          "requirement": "≥ 75% of regularly occupied area has views to nature/outdoors"
+        }
+      },
+      {
+        "id": "M02",
+        "category": "Mind",
+        "name": "Biophilia I — Qualitative",
+        "type": "precondition",
+        "points": 0,
+        "required": true,
+        "description": "Develop a biophilia plan incorporating environmental elements at each design stage",
+        "canopyRelevance": "high",
+        "metrics": ["biophilia_plan_complete", "nature_integration_strategy"]
+      },
+      {
+        "id": "M07",
+        "category": "Mind",
+        "name": "Biophilia II — Quantitative",
+        "type": "optimization",
+        "points": 1,
+        "description": "Prescribe visual and physical connection with outdoor nature",
+        "canopyRelevance": "high",
+        "metrics": ["plant_wall_pct_floor_area", "potted_plant_coverage_pct", "outdoor_nature_access"],
+        "thresholds": {
+          "plantWall": "Plant wall per floor ≥ 2% of floor area (or largest available wall)",
+          "pottedPlants": "Potted plants or planted beds ≥ 1% of floor area per floor",
+          "outdoorSpace": "Outdoor space with nature accessible within 200m of building entrance"
+        }
+      },
+      {
+        "id": "A05",
+        "category": "Air",
+        "name": "Enhanced Air Quality",
+        "type": "optimization",
+        "points": 2,
+        "description": "Improve outdoor air quality through green infrastructure",
+        "canopyRelevance": "high",
+        "metrics": ["pm25_reduction_pct", "voc_filtration", "outdoor_air_quality_monitoring"]
+      }
+    ]
+  },
+
+  "greenGlobes": {
+    "name": "Green Globes",
+    "fullName": "Green Globes for New Construction / Existing Buildings",
+    "organization": "Green Building Initiative (GBI)",
+    "totalPoints": 1000,
+    "levels": [
+      { "name": "1 Globe", "min": 35, "max": 54, "pct": true },
+      { "name": "2 Globes", "min": 55, "max": 69, "pct": true },
+      { "name": "3 Globes", "min": 70, "max": 84, "pct": true },
+      { "name": "4 Globes", "min": 85, "max": 100, "pct": true }
+    ],
+    "greenInfraCredits": [
+      {
+        "id": "SITE-1",
+        "category": "Site",
+        "name": "Site Selection",
+        "type": "credit",
+        "points": 50,
+        "description": "Encourage selection of previously developed sites, brownfield redevelopment",
+        "canopyRelevance": "medium",
+        "metrics": ["previously_developed", "brownfield", "proximity_to_transit"]
+      },
+      {
+        "id": "SITE-2",
+        "category": "Site",
+        "name": "Site Development & Ecological Enhancement",
+        "type": "credit",
+        "points": 75,
+        "description": "Protect and restore natural features, minimize site disturbance",
+        "canopyRelevance": "high",
+        "metrics": ["natural_feature_protection_pct", "native_species_ratio", "canopy_coverage_target"],
+        "thresholds": {
+          "erosionControl": "Erosion and sediment control during construction",
+          "nativePlanting": "≥ 50% of landscaped area with native/adapted species",
+          "canopy": "Tree canopy target for site based on climate zone"
+        }
+      },
+      {
+        "id": "SITE-3",
+        "category": "Site",
+        "name": "Stormwater Management",
+        "type": "credit",
+        "points": 60,
+        "description": "Manage stormwater through green infrastructure and LID techniques",
+        "canopyRelevance": "high",
+        "metrics": ["runoff_managed_pct", "permeable_surface_pct", "bioswale_area"]
+      },
+      {
+        "id": "ENERGY-1",
+        "category": "Energy",
+        "name": "Energy Performance",
+        "type": "credit",
+        "points": 200,
+        "description": "Reduce energy consumption including passive cooling from vegetation",
+        "canopyRelevance": "medium",
+        "metrics": ["energy_reduction_pct", "passive_cooling_contribution"]
+      }
+    ]
+  }
+}

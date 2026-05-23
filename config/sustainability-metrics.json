@@ -1,0 +1,28 @@
+{
+  "_version": "1.0.0",
+  "_description": "Building sustainability metrics — energy and cost impacts",
+  "_sources": [
+    "McPherson 2003: 1,800 kWh/acre/yr cooling savings",
+    "Akbari et al. 2001: 2.6x electricity in full sun vs full shade",
+    "Sacramento study: 30% cooling reduction, 0.6-0.8 kW peak demand savings",
+    "Chicago study: Single 25ft tree west = 7% cooling, east = 5%"
+  ],
+
+  "hvac": {
+    "coolingKwhPerCanopyAcre": 1800,
+    "heatingThermSavingsPerAcre": 12,
+    "peakDemandReductionKw": 0.7,
+    "electricityRate": 0.14,
+    "gasRate": 1.20
+  },
+  "maintenance": {
+    "stormwaterInfraReduction": 0.15,
+    "pavementLifeExtension": 0.20,
+    "erosionControlValue": 85,
+    "note": "Maintenance estimates are approximate ranges based on industry benchmarks, not from specific studies"
+  },
+  "airQualityHealth": {
+    "heatMortalityReduction": 0.001,
+    "source": "Nowak et al. 2014 (air quality improvements from pollutant removal)"
+  }
+}

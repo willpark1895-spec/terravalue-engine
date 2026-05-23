@@ -1,0 +1,3814 @@
+{
+  "_meta": {
+    "generatedAt": "2026-05-20T00:00:00.000Z",
+    "engineVersion": "1.0.0",
+    "note": "Frozen outputs of lib/terravalue-engine.js across the test fixtures. Future runs assert against these. When intentionally changing engine math, re-run generate-snapshots.js and commit the updated file alongside the change."
+  },
+  "ecosystem": {
+    "roswell": {
+      "services": {
+        "carbon": {
+          "value": 173,
+          "label": "Carbon Sequestration",
+          "ratePerCanopyAcre": 494,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+          "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+          "co2PerAcre": 2.6,
+          "socialCostCarbon": 190
+        },
+        "stormwater": {
+          "value": 182,
+          "label": "Stormwater Management",
+          "ratePerCanopyAcre": 520,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+          "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+          "interceptionRate": 0.35,
+          "costPer1000Gal": 4
+        },
+        "airQuality": {
+          "value": 146,
+          "label": "Air Quality Improvement",
+          "ratePerCanopyAcre": 418,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+          "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+          "pm25ValuePerTon": 117106
+        },
+        "energy": {
+          "value": 88,
+          "label": "Energy Savings",
+          "ratePerCanopyAcre": 252,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+          "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+          "kwhPerAcre": 1800,
+          "coolingReductionPct": 0.3,
+          "heatingPenaltyPct": 0.05
+        },
+        "habitat": {
+          "value": 112,
+          "label": "Habitat Value",
+          "ratePerCanopyAcre": 320,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from ecosystem services valuation literature",
+          "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+          "wtpPerAcre": 320
+        },
+        "propertyPremium": {
+          "value": 40833,
+          "label": "Property Value Premium",
+          "premiumPct": 0.07,
+          "unit": "% of market value",
+          "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+        }
+      },
+      "totalAnnual": 41534,
+      "parcelMetrics": {
+        "lotAcres": 1,
+        "canopyAcres": 0.35,
+        "canopyPct": 35,
+        "estimatedMarketValue": 500000
+      },
+      "methodology": "1.0.0"
+    },
+    "mountVernon": {
+      "services": {
+        "carbon": {
+          "value": 111,
+          "label": "Carbon Sequestration",
+          "ratePerCanopyAcre": 494,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+          "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+          "co2PerAcre": 2.6,
+          "socialCostCarbon": 190
+        },
+        "stormwater": {
+          "value": 117,
+          "label": "Stormwater Management",
+          "ratePerCanopyAcre": 520,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+          "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+          "interceptionRate": 0.35,
+          "costPer1000Gal": 4
+        },
+        "airQuality": {
+          "value": 94,
+          "label": "Air Quality Improvement",
+          "ratePerCanopyAcre": 418,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+          "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+          "pm25ValuePerTon": 117106
+        },
+        "energy": {
+          "value": 57,
+          "label": "Energy Savings",
+          "ratePerCanopyAcre": 252,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+          "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+          "kwhPerAcre": 1800,
+          "coolingReductionPct": 0.3,
+          "heatingPenaltyPct": 0.05
+        },
+        "habitat": {
+          "value": 72,
+          "label": "Habitat Value",
+          "ratePerCanopyAcre": 320,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from ecosystem services valuation literature",
+          "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+          "wtpPerAcre": 320
+        },
+        "propertyPremium": {
+          "value": 39375,
+          "label": "Property Value Premium",
+          "premiumPct": 0.07,
+          "unit": "% of market value",
+          "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+        }
+      },
+      "totalAnnual": 39826,
+      "parcelMetrics": {
+        "lotAcres": 0.5,
+        "canopyAcres": 0.225,
+        "canopyPct": 45,
+        "estimatedMarketValue": 375000
+      },
+      "methodology": "1.0.0"
+    },
+    "northRiver": {
+      "services": {
+        "carbon": {
+          "value": 198,
+          "label": "Carbon Sequestration",
+          "ratePerCanopyAcre": 494,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+          "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+          "co2PerAcre": 2.6,
+          "socialCostCarbon": 190
+        },
+        "stormwater": {
+          "value": 208,
+          "label": "Stormwater Management",
+          "ratePerCanopyAcre": 520,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+          "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+          "interceptionRate": 0.35,
+          "costPer1000Gal": 4
+        },
+        "airQuality": {
+          "value": 167,
+          "label": "Air Quality Improvement",
+          "ratePerCanopyAcre": 418,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+          "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+          "pm25ValuePerTon": 117106
+        },
+        "energy": {
+          "value": 101,
+          "label": "Energy Savings",
+          "ratePerCanopyAcre": 252,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+          "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+          "kwhPerAcre": 1800,
+          "coolingReductionPct": 0.3,
+          "heatingPenaltyPct": 0.05
+        },
+        "habitat": {
+          "value": 128,
+          "label": "Habitat Value",
+          "ratePerCanopyAcre": 320,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from ecosystem services valuation literature",
+          "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+          "wtpPerAcre": 320
+        },
+        "propertyPremium": {
+          "value": 58333,
+          "label": "Property Value Premium",
+          "premiumPct": 0.07,
+          "unit": "% of market value",
+          "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+        }
+      },
+      "totalAnnual": 59135,
+      "parcelMetrics": {
+        "lotAcres": 2,
+        "canopyAcres": 0.4,
+        "canopyPct": 20,
+        "estimatedMarketValue": 1250000
+      },
+      "methodology": "1.0.0"
+    },
+    "noCanopy": {
+      "services": {
+        "carbon": {
+          "value": 0,
+          "label": "Carbon Sequestration",
+          "ratePerCanopyAcre": 494,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+          "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+          "co2PerAcre": 2.6,
+          "socialCostCarbon": 190
+        },
+        "stormwater": {
+          "value": 0,
+          "label": "Stormwater Management",
+          "ratePerCanopyAcre": 520,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+          "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+          "interceptionRate": 0.35,
+          "costPer1000Gal": 4
+        },
+        "airQuality": {
+          "value": 0,
+          "label": "Air Quality Improvement",
+          "ratePerCanopyAcre": 418,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+          "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+          "pm25ValuePerTon": 117106
+        },
+        "energy": {
+          "value": 0,
+          "label": "Energy Savings",
+          "ratePerCanopyAcre": 252,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+          "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+          "kwhPerAcre": 1800,
+          "coolingReductionPct": 0.3,
+          "heatingPenaltyPct": 0.05
+        },
+        "habitat": {
+          "value": 0,
+          "label": "Habitat Value",
+          "ratePerCanopyAcre": 320,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from ecosystem services valuation literature",
+          "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+          "wtpPerAcre": 320
+        },
+        "propertyPremium": {
+          "value": 0,
+          "label": "Property Value Premium",
+          "premiumPct": 0.07,
+          "unit": "% of market value",
+          "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+        }
+      },
+      "totalAnnual": 0,
+      "parcelMetrics": {
+        "lotAcres": 0.23,
+        "canopyAcres": 0,
+        "canopyPct": 0,
+        "estimatedMarketValue": 200000
+      },
+      "methodology": "1.0.0"
+    },
+    "maxCanopy": {
+      "services": {
+        "carbon": {
+          "value": 395,
+          "label": "Carbon Sequestration",
+          "ratePerCanopyAcre": 494,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+          "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+          "co2PerAcre": 2.6,
+          "socialCostCarbon": 190
+        },
+        "stormwater": {
+          "value": 416,
+          "label": "Stormwater Management",
+          "ratePerCanopyAcre": 520,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+          "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+          "interceptionRate": 0.35,
+          "costPer1000Gal": 4
+        },
+        "airQuality": {
+          "value": 334,
+          "label": "Air Quality Improvement",
+          "ratePerCanopyAcre": 418,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+          "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+          "pm25ValuePerTon": 117106
+        },
+        "energy": {
+          "value": 202,
+          "label": "Energy Savings",
+          "ratePerCanopyAcre": 252,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+          "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+          "kwhPerAcre": 1800,
+          "coolingReductionPct": 0.3,
+          "heatingPenaltyPct": 0.05
+        },
+        "habitat": {
+          "value": 256,
+          "label": "Habitat Value",
+          "ratePerCanopyAcre": 320,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from ecosystem services valuation literature",
+          "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+          "wtpPerAcre": 320
+        },
+        "propertyPremium": {
+          "value": 90000,
+          "label": "Property Value Premium",
+          "premiumPct": 0.07,
+          "unit": "% of market value",
+          "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+        }
+      },
+      "totalAnnual": 91603,
+      "parcelMetrics": {
+        "lotAcres": 1,
+        "canopyAcres": 0.8,
+        "canopyPct": 80,
+        "estimatedMarketValue": 750000
+      },
+      "methodology": "1.0.0"
+    },
+    "nonGA": {
+      "services": {
+        "carbon": {
+          "value": 102,
+          "label": "Carbon Sequestration",
+          "ratePerCanopyAcre": 494,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+          "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+          "co2PerAcre": 2.6,
+          "socialCostCarbon": 190
+        },
+        "stormwater": {
+          "value": 107,
+          "label": "Stormwater Management",
+          "ratePerCanopyAcre": 520,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+          "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+          "interceptionRate": 0.35,
+          "costPer1000Gal": 4
+        },
+        "airQuality": {
+          "value": 86,
+          "label": "Air Quality Improvement",
+          "ratePerCanopyAcre": 418,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+          "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+          "pm25ValuePerTon": 117106
+        },
+        "energy": {
+          "value": 52,
+          "label": "Energy Savings",
+          "ratePerCanopyAcre": 252,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+          "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+          "kwhPerAcre": 1800,
+          "coolingReductionPct": 0.3,
+          "heatingPenaltyPct": 0.05
+        },
+        "habitat": {
+          "value": 66,
+          "label": "Habitat Value",
+          "ratePerCanopyAcre": 320,
+          "unit": "$/canopy-acre/yr",
+          "methodology": "Benefit transfer from ecosystem services valuation literature",
+          "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+          "wtpPerAcre": 320
+        },
+        "propertyPremium": {
+          "value": 28000,
+          "label": "Property Value Premium",
+          "premiumPct": 0.07,
+          "unit": "% of market value",
+          "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+        }
+      },
+      "totalAnnual": 28413,
+      "parcelMetrics": {
+        "lotAcres": 0.689,
+        "canopyAcres": 0.207,
+        "canopyPct": 30,
+        "estimatedMarketValue": 400000
+      },
+      "methodology": "1.0.0"
+    }
+  },
+  "appreciation": [
+    {
+      "input": {
+        "currentScore": 45,
+        "projectedScore": 72,
+        "timelineYears": 30,
+        "propertyValue": 500000,
+        "currentCanopyPct": 25,
+        "lotSizeSqFt": 15000
+      },
+      "output": {
+        "summary": {
+          "currentScore": 45,
+          "projectedScore": 72,
+          "scoreDelta": 27,
+          "timelineYears": 30,
+          "propertyValue": 500000
+        },
+        "canopyChange": {
+          "currentPct": 25,
+          "projectedPct": 38.5,
+          "changePct": 13.5
+        },
+        "propertyImpact": {
+          "greenPremiumShift": 10500,
+          "greenPremiumPct": 2.1,
+          "marketAppreciation": 903397,
+          "baseAppreciationRate": 0.035
+        },
+        "ecosystemValue": {
+          "annualDelta": 93,
+          "cumulativeOverPeriod": 2790,
+          "perServiceDelta": {
+            "carbon": 23,
+            "stormwater": 24,
+            "airQuality": 19,
+            "energy": 12,
+            "habitat": 15
+          }
+        },
+        "sustainabilityValue": {
+          "hvac": {
+            "annualCoolingSavingsKwh": 84,
+            "annualCoolingSavingsDollars": 12,
+            "annualHeatingSavingsTherm": 1,
+            "annualHeatingSavingsDollars": 1,
+            "totalAnnual": 13,
+            "cumulativeSavings": 390,
+            "source": "McPherson 2003; Akbari et al. 2001; GA Power / Atlanta Gas Light rates"
+          },
+          "maintenance": {
+            "stormwaterInfraSavings": 62,
+            "pavementLifeSavings": 55,
+            "erosionControlValue": 4,
+            "totalAnnual": 121,
+            "cumulativeSavings": 3630
+          },
+          "healthBenefits": {
+            "peakDemandReductionKw": 1.4,
+            "estimatedTreesAdded": 2,
+            "source": "Nowak et al. 2014 (air quality via pollutant removal)"
+          },
+          "totalAnnual": 134,
+          "totalOverPeriod": 4020
+        },
+        "totalImpact": {
+          "greenInfraOnly": 13290,
+          "withMarketAppreciation": 916687
+        },
+        "methodology": {
+          "version": "1.0.0",
+          "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
+          "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
+          "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
+          "ecoServices": "Atlanta iTree Eco 2014 + EPA SC-GHG 2023 ($190/t CO2) + peer-reviewed rates ($2004/canopy-acre)",
+          "marketBaseline": "FHFA HPI Atlanta metro long-term avg (3.5% annual)",
+          "disclaimer": "Projections use peer-reviewed coefficients with linear interpolation. Actual results depend on species, placement, maturity, soil conditions, microclimate, and market factors. This is a research-backed directional estimate."
+        }
+      }
+    },
+    {
+      "input": {
+        "currentScore": 20,
+        "projectedScore": 80,
+        "timelineYears": 10,
+        "propertyValue": 300000,
+        "currentCanopyPct": 10,
+        "lotSizeSqFt": 43560
+      },
+      "output": {
+        "summary": {
+          "currentScore": 20,
+          "projectedScore": 80,
+          "scoreDelta": 60,
+          "timelineYears": 10,
+          "propertyValue": 300000
+        },
+        "canopyChange": {
+          "currentPct": 10,
+          "projectedPct": 40,
+          "changePct": 30
+        },
+        "propertyImpact": {
+          "greenPremiumShift": 14497,
+          "greenPremiumPct": 4.83,
+          "marketAppreciation": 123180,
+          "baseAppreciationRate": 0.035
+        },
+        "ecosystemValue": {
+          "annualDelta": 601,
+          "cumulativeOverPeriod": 6010,
+          "perServiceDelta": {
+            "carbon": 148,
+            "stormwater": 156,
+            "airQuality": 125,
+            "energy": 76,
+            "habitat": 96
+          }
+        },
+        "sustainabilityValue": {
+          "hvac": {
+            "annualCoolingSavingsKwh": 540,
+            "annualCoolingSavingsDollars": 76,
+            "annualHeatingSavingsTherm": 4,
+            "annualHeatingSavingsDollars": 5,
+            "totalAnnual": 81,
+            "cumulativeSavings": 810,
+            "source": "McPherson 2003; Akbari et al. 2001; GA Power / Atlanta Gas Light rates"
+          },
+          "maintenance": {
+            "stormwaterInfraSavings": 180,
+            "pavementLifeSavings": 160,
+            "erosionControlValue": 26,
+            "totalAnnual": 366,
+            "cumulativeSavings": 3660
+          },
+          "healthBenefits": {
+            "peakDemandReductionKw": 8.4,
+            "estimatedTreesAdded": 12,
+            "source": "Nowak et al. 2014 (air quality via pollutant removal)"
+          },
+          "totalAnnual": 447,
+          "totalOverPeriod": 4470
+        },
+        "totalImpact": {
+          "greenInfraOnly": 20507,
+          "withMarketAppreciation": 143687
+        },
+        "methodology": {
+          "version": "1.0.0",
+          "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
+          "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
+          "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
+          "ecoServices": "Atlanta iTree Eco 2014 + EPA SC-GHG 2023 ($190/t CO2) + peer-reviewed rates ($2004/canopy-acre)",
+          "marketBaseline": "FHFA HPI Atlanta metro long-term avg (3.5% annual)",
+          "disclaimer": "Projections use peer-reviewed coefficients with linear interpolation. Actual results depend on species, placement, maturity, soil conditions, microclimate, and market factors. This is a research-backed directional estimate."
+        }
+      }
+    },
+    {
+      "input": {
+        "currentScore": 70,
+        "projectedScore": 70,
+        "timelineYears": 5,
+        "propertyValue": 750000,
+        "currentCanopyPct": 40,
+        "lotSizeSqFt": 8000
+      },
+      "output": {
+        "summary": {
+          "currentScore": 70,
+          "projectedScore": 70,
+          "scoreDelta": 0,
+          "timelineYears": 5,
+          "propertyValue": 750000
+        },
+        "canopyChange": {
+          "currentPct": 40,
+          "projectedPct": 40,
+          "changePct": 0
+        },
+        "propertyImpact": {
+          "greenPremiumShift": 0,
+          "greenPremiumPct": 0,
+          "marketAppreciation": 140765,
+          "baseAppreciationRate": 0.035
+        },
+        "ecosystemValue": {
+          "annualDelta": 0,
+          "cumulativeOverPeriod": 0,
+          "perServiceDelta": {
+            "carbon": 0,
+            "stormwater": 0,
+            "airQuality": 0,
+            "energy": 0,
+            "habitat": 0
+          }
+        },
+        "sustainabilityValue": {
+          "hvac": {
+            "annualCoolingSavingsKwh": 0,
+            "annualCoolingSavingsDollars": 0,
+            "annualHeatingSavingsTherm": 0,
+            "annualHeatingSavingsDollars": 0,
+            "totalAnnual": 0,
+            "cumulativeSavings": 0,
+            "source": "McPherson 2003; Akbari et al. 2001; GA Power / Atlanta Gas Light rates"
+          },
+          "maintenance": {
+            "stormwaterInfraSavings": -33,
+            "pavementLifeSavings": -29,
+            "erosionControlValue": 0,
+            "totalAnnual": -62,
+            "cumulativeSavings": -310
+          },
+          "healthBenefits": {
+            "peakDemandReductionKw": 0,
+            "estimatedTreesAdded": 0,
+            "source": "Nowak et al. 2014 (air quality via pollutant removal)"
+          },
+          "totalAnnual": -62,
+          "totalOverPeriod": -310
+        },
+        "totalImpact": {
+          "greenInfraOnly": 0,
+          "withMarketAppreciation": 140765
+        },
+        "methodology": {
+          "version": "1.0.0",
+          "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
+          "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
+          "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
+          "ecoServices": "Atlanta iTree Eco 2014 + EPA SC-GHG 2023 ($190/t CO2) + peer-reviewed rates ($2004/canopy-acre)",
+          "marketBaseline": "FHFA HPI Atlanta metro long-term avg (3.5% annual)",
+          "disclaimer": "Projections use peer-reviewed coefficients with linear interpolation. Actual results depend on species, placement, maturity, soil conditions, microclimate, and market factors. This is a research-backed directional estimate."
+        }
+      }
+    },
+    {
+      "input": {
+        "currentScore": 90,
+        "projectedScore": 95,
+        "timelineYears": 20,
+        "propertyValue": 1000000,
+        "currentCanopyPct": 60,
+        "lotSizeSqFt": 100000
+      },
+      "output": {
+        "summary": {
+          "currentScore": 90,
+          "projectedScore": 95,
+          "scoreDelta": 5,
+          "timelineYears": 20,
+          "propertyValue": 1000000
+        },
+        "canopyChange": {
+          "currentPct": 60,
+          "projectedPct": 62.5,
+          "changePct": 2.5
+        },
+        "propertyImpact": {
+          "greenPremiumShift": 1799,
+          "greenPremiumPct": 0.18,
+          "marketAppreciation": 989789,
+          "baseAppreciationRate": 0.035
+        },
+        "ecosystemValue": {
+          "annualDelta": 115,
+          "cumulativeOverPeriod": 2300,
+          "perServiceDelta": {
+            "carbon": 28,
+            "stormwater": 30,
+            "airQuality": 24,
+            "energy": 14,
+            "habitat": 18
+          }
+        },
+        "sustainabilityValue": {
+          "hvac": {
+            "annualCoolingSavingsKwh": 103,
+            "annualCoolingSavingsDollars": 14,
+            "annualHeatingSavingsTherm": 1,
+            "annualHeatingSavingsDollars": 1,
+            "totalAnnual": 15,
+            "cumulativeSavings": 300,
+            "source": "McPherson 2003; Akbari et al. 2001; GA Power / Atlanta Gas Light rates"
+          },
+          "maintenance": {
+            "stormwaterInfraSavings": 413,
+            "pavementLifeSavings": 367,
+            "erosionControlValue": 5,
+            "totalAnnual": 785,
+            "cumulativeSavings": 15700
+          },
+          "healthBenefits": {
+            "peakDemandReductionKw": 1.4,
+            "estimatedTreesAdded": 2,
+            "source": "Nowak et al. 2014 (air quality via pollutant removal)"
+          },
+          "totalAnnual": 800,
+          "totalOverPeriod": 16000
+        },
+        "totalImpact": {
+          "greenInfraOnly": 4099,
+          "withMarketAppreciation": 993888
+        },
+        "methodology": {
+          "version": "1.0.0",
+          "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
+          "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
+          "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
+          "ecoServices": "Atlanta iTree Eco 2014 + EPA SC-GHG 2023 ($190/t CO2) + peer-reviewed rates ($2004/canopy-acre)",
+          "marketBaseline": "FHFA HPI Atlanta metro long-term avg (3.5% annual)",
+          "disclaimer": "Projections use peer-reviewed coefficients with linear interpolation. Actual results depend on species, placement, maturity, soil conditions, microclimate, and market factors. This is a research-backed directional estimate."
+        }
+      }
+    }
+  ],
+  "certifications": {
+    "high": {
+      "leed": {
+        "certification": "LEED v4.1",
+        "organization": "U.S. Green Building Council (USGBC)",
+        "credits": [
+          {
+            "id": "SS-P1",
+            "category": "Sustainable Sites",
+            "name": "Construction Activity Pollution Prevention",
+            "type": "prerequisite",
+            "points": 0,
+            "required": true,
+            "description": "Erosion and sedimentation control plan for all construction activities",
+            "canopyRelevance": "high",
+            "metrics": [
+              "erosion_control_plan",
+              "sediment_barriers",
+              "stabilization_timeline"
+            ],
+            "status": "achieved",
+            "currentValue": "Plan in place",
+            "targetValue": "Erosion & sediment control plan required",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "SS-C2",
+            "category": "Sustainable Sites",
+            "name": "Site Development — Protect or Restore Habitat",
+            "type": "credit",
+            "points": 2,
+            "required": false,
+            "description": "Conserve existing natural areas and restore damaged areas with native/adapted vegetation",
+            "canopyRelevance": "high",
+            "metrics": [
+              "native_vegetation_pct",
+              "restored_area_sqft",
+              "greenfield_protection_pct"
+            ],
+            "thresholds": {
+              "option1": "Protect/restore ≥ 40% of site (excl. building footprint) with native vegetation",
+              "option2": "Provide $0.40/sqft for off-site habitat protection via accredited land trust"
+            },
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "SS-C4",
+            "category": "Sustainable Sites",
+            "name": "Rainwater Management",
+            "type": "credit",
+            "points": 3,
+            "required": false,
+            "description": "Manage on-site rainwater to reduce runoff volume and improve water quality",
+            "canopyRelevance": "high",
+            "metrics": [
+              "percentile_storm_managed",
+              "runoff_volume_reduction_pct",
+              "gi_area_sqft"
+            ],
+            "thresholds": {
+              "1pt": "Manage 80th percentile rainfall event on-site",
+              "2pt": "Manage 85th percentile rainfall event on-site",
+              "3pt": "Manage 90th or 95th percentile (varies by region)"
+            },
+            "status": "partial",
+            "currentValue": "Green infrastructure present",
+            "targetValue": "Manage 85th percentile storm on-site",
+            "progressPct": 60,
+            "actions": []
+          },
+          {
+            "id": "SS-C5",
+            "category": "Sustainable Sites",
+            "name": "Heat Island Reduction",
+            "type": "credit",
+            "points": 2,
+            "required": false,
+            "description": "Minimize effects on microclimates and human/wildlife habitats through canopy/materials",
+            "canopyRelevance": "high",
+            "metrics": [
+              "canopy_coverage_pct",
+              "sri_weighted_avg",
+              "green_roof_pct"
+            ],
+            "thresholds": {
+              "nonroof": "Tree canopy within 10yr: ≥ 50% hardscape; or SRI ≥ 29 paving; or combination",
+              "roof": "Vegetated roof ≥ 75%; or SRI-compliant ≥ 75%; or combination"
+            },
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "50% hardscape shaded",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "SS-C6",
+            "category": "Sustainable Sites",
+            "name": "Light Pollution Reduction",
+            "type": "credit",
+            "points": 1,
+            "required": false,
+            "description": "Minimize light trespass, reduce sky-glow, and improve nighttime visibility",
+            "canopyRelevance": "low",
+            "metrics": [
+              "blc_compliance",
+              "uplight_ratio"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "EA-C2",
+            "category": "Energy & Atmosphere",
+            "name": "Optimize Energy Performance",
+            "type": "credit",
+            "points": 18,
+            "required": false,
+            "description": "Reduce energy cost through efficiency measures including passive design",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "energy_cost_reduction_pct",
+              "cooling_load_reduction"
+            ],
+            "thresholds": {
+              "1pt": "6% new / 3% existing energy cost reduction",
+              "18pt": "50% new / 45% existing energy cost reduction"
+            },
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 6,
+          "achieved": 3,
+          "partial": 1,
+          "gaps": 2
+        },
+        "achievableLevel": {
+          "level": "Certified",
+          "estimatedTotal": 41,
+          "greenInfraContribution": 6,
+          "note": "Estimated with 35 points from non-site categories (conservative)"
+        },
+        "prerequisites": [
+          {
+            "name": "Construction Activity Pollution Prevention",
+            "met": true
+          }
+        ]
+      },
+      "breeam": {
+        "certification": "BREEAM",
+        "organization": "BRE Group (UK)",
+        "credits": [
+          {
+            "id": "LE-01",
+            "category": "Land Use & Ecology",
+            "name": "Site Selection",
+            "type": "credit",
+            "credits": 2,
+            "description": "Encourage use of previously developed and/or contaminated land",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "previously_developed_pct",
+              "contaminated_land_remediation"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "LE-02",
+            "category": "Land Use & Ecology",
+            "name": "Ecological Value of Site and Protection",
+            "type": "credit",
+            "credits": 2,
+            "description": "Assess and protect existing ecological value of the site",
+            "canopyRelevance": "high",
+            "metrics": [
+              "ecological_survey_complete",
+              "protected_features_list",
+              "ecological_value_score"
+            ],
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "LE-03",
+            "category": "Land Use & Ecology",
+            "name": "Minimising Impact on Existing Site Ecology",
+            "type": "credit",
+            "credits": 2,
+            "description": "Minimize negative impact on existing site ecology",
+            "canopyRelevance": "high",
+            "metrics": [
+              "tree_protection_plan",
+              "root_protection_zones",
+              "canopy_retention_pct"
+            ],
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "LE-04",
+            "category": "Land Use & Ecology",
+            "name": "Enhancement of Ecological Value",
+            "type": "credit",
+            "credits": 3,
+            "description": "Enhance the ecological value of the site — 10% Biodiversity Net Gain required (2024)",
+            "canopyRelevance": "high",
+            "metrics": [
+              "biodiversity_net_gain_pct",
+              "native_planting_area",
+              "urban_greening_factor"
+            ],
+            "thresholds": {
+              "minimum": "10% Biodiversity Net Gain (BNG) — UK law since Feb 2024",
+              "ugf": "Urban Greening Factor ≥ 0.3 (London planning requirement)",
+              "3credits": "Significant net gain with long-term management plan"
+            },
+            "status": "achieved",
+            "currentValue": "15% BNG",
+            "targetValue": "10% Biodiversity Net Gain (minimum)",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "LE-05",
+            "category": "Land Use & Ecology",
+            "name": "Long-term Biodiversity Management",
+            "type": "credit",
+            "credits": 2,
+            "description": "Long-term management and maintenance of site ecology",
+            "canopyRelevance": "high",
+            "metrics": [
+              "management_plan_years",
+              "monitoring_schedule",
+              "responsible_party"
+            ],
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 5,
+          "achieved": 4,
+          "partial": 0,
+          "gaps": 1
+        },
+        "achievableLevel": null,
+        "prerequisites": []
+      },
+      "well": {
+        "certification": "WELL v2",
+        "organization": "International WELL Building Institute (IWBI)",
+        "credits": [
+          {
+            "id": "L06",
+            "category": "Light",
+            "name": "Visual Lighting Design",
+            "type": "optimization",
+            "points": 3,
+            "description": "Provide views to nature and daylight access",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "daylight_views_pct",
+              "nature_views_pct"
+            ],
+            "thresholds": {
+              "requirement": "≥ 75% of regularly occupied area has views to nature/outdoors"
+            },
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "M02",
+            "category": "Mind",
+            "name": "Biophilia I — Qualitative",
+            "type": "precondition",
+            "points": 0,
+            "required": true,
+            "description": "Develop a biophilia plan incorporating environmental elements at each design stage",
+            "canopyRelevance": "high",
+            "metrics": [
+              "biophilia_plan_complete",
+              "nature_integration_strategy"
+            ],
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "M07",
+            "category": "Mind",
+            "name": "Biophilia II — Quantitative",
+            "type": "optimization",
+            "points": 1,
+            "description": "Prescribe visual and physical connection with outdoor nature",
+            "canopyRelevance": "high",
+            "metrics": [
+              "plant_wall_pct_floor_area",
+              "potted_plant_coverage_pct",
+              "outdoor_nature_access"
+            ],
+            "thresholds": {
+              "plantWall": "Plant wall per floor ≥ 2% of floor area (or largest available wall)",
+              "pottedPlants": "Potted plants or planted beds ≥ 1% of floor area per floor",
+              "outdoorSpace": "Outdoor space with nature accessible within 200m of building entrance"
+            },
+            "status": "achieved",
+            "currentValue": "Plant wall: 3%, Plants: 2%",
+            "targetValue": "Plant wall ≥2% floor area; Potted plants ≥1% floor area",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "A05",
+            "category": "Air",
+            "name": "Enhanced Air Quality",
+            "type": "optimization",
+            "points": 2,
+            "description": "Improve outdoor air quality through green infrastructure",
+            "canopyRelevance": "high",
+            "metrics": [
+              "pm25_reduction_pct",
+              "voc_filtration",
+              "outdoor_air_quality_monitoring"
+            ],
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 4,
+          "achieved": 3,
+          "partial": 0,
+          "gaps": 1
+        },
+        "achievableLevel": null,
+        "prerequisites": [
+          {
+            "name": "Biophilia I — Qualitative",
+            "met": true
+          }
+        ]
+      },
+      "greenGlobes": {
+        "certification": "Green Globes",
+        "organization": "Green Building Initiative (GBI)",
+        "credits": [
+          {
+            "id": "SITE-1",
+            "category": "Site",
+            "name": "Site Selection",
+            "type": "credit",
+            "points": 50,
+            "description": "Encourage selection of previously developed sites, brownfield redevelopment",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "previously_developed",
+              "brownfield",
+              "proximity_to_transit"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "SITE-2",
+            "category": "Site",
+            "name": "Site Development & Ecological Enhancement",
+            "type": "credit",
+            "points": 75,
+            "description": "Protect and restore natural features, minimize site disturbance",
+            "canopyRelevance": "high",
+            "metrics": [
+              "natural_feature_protection_pct",
+              "native_species_ratio",
+              "canopy_coverage_target"
+            ],
+            "thresholds": {
+              "erosionControl": "Erosion and sediment control during construction",
+              "nativePlanting": "≥ 50% of landscaped area with native/adapted species",
+              "canopy": "Tree canopy target for site based on climate zone"
+            },
+            "status": "achieved",
+            "currentValue": "55% canopy",
+            "targetValue": "50% hardscape shaded",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "SITE-3",
+            "category": "Site",
+            "name": "Stormwater Management",
+            "type": "credit",
+            "points": 60,
+            "description": "Manage stormwater through green infrastructure and LID techniques",
+            "canopyRelevance": "high",
+            "metrics": [
+              "runoff_managed_pct",
+              "permeable_surface_pct",
+              "bioswale_area"
+            ],
+            "status": "partial",
+            "currentValue": "Green infrastructure present",
+            "targetValue": "Manage 85th percentile storm on-site",
+            "progressPct": 60,
+            "actions": []
+          },
+          {
+            "id": "ENERGY-1",
+            "category": "Energy",
+            "name": "Energy Performance",
+            "type": "credit",
+            "points": 200,
+            "description": "Reduce energy consumption including passive cooling from vegetation",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "energy_reduction_pct",
+              "passive_cooling_contribution"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 4,
+          "achieved": 1,
+          "partial": 1,
+          "gaps": 2
+        },
+        "achievableLevel": null,
+        "prerequisites": []
+      }
+    },
+    "low": {
+      "leed": {
+        "certification": "LEED v4.1",
+        "organization": "U.S. Green Building Council (USGBC)",
+        "credits": [
+          {
+            "id": "SS-P1",
+            "category": "Sustainable Sites",
+            "name": "Construction Activity Pollution Prevention",
+            "type": "prerequisite",
+            "points": 0,
+            "required": true,
+            "description": "Erosion and sedimentation control plan for all construction activities",
+            "canopyRelevance": "high",
+            "metrics": [
+              "erosion_control_plan",
+              "sediment_barriers",
+              "stabilization_timeline"
+            ],
+            "status": "gap",
+            "currentValue": "No plan",
+            "targetValue": "Erosion & sediment control plan required",
+            "progressPct": 0,
+            "actions": [
+              "Develop Construction Activity Pollution Prevention plan"
+            ]
+          },
+          {
+            "id": "SS-C2",
+            "category": "Sustainable Sites",
+            "name": "Site Development — Protect or Restore Habitat",
+            "type": "credit",
+            "points": 2,
+            "required": false,
+            "description": "Conserve existing natural areas and restore damaged areas with native/adapted vegetation",
+            "canopyRelevance": "high",
+            "metrics": [
+              "native_vegetation_pct",
+              "restored_area_sqft",
+              "greenfield_protection_pct"
+            ],
+            "thresholds": {
+              "option1": "Protect/restore ≥ 40% of site (excl. building footprint) with native vegetation",
+              "option2": "Provide $0.40/sqft for off-site habitat protection via accredited land trust"
+            },
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 33,
+            "actions": []
+          },
+          {
+            "id": "SS-C4",
+            "category": "Sustainable Sites",
+            "name": "Rainwater Management",
+            "type": "credit",
+            "points": 3,
+            "required": false,
+            "description": "Manage on-site rainwater to reduce runoff volume and improve water quality",
+            "canopyRelevance": "high",
+            "metrics": [
+              "percentile_storm_managed",
+              "runoff_volume_reduction_pct",
+              "gi_area_sqft"
+            ],
+            "thresholds": {
+              "1pt": "Manage 80th percentile rainfall event on-site",
+              "2pt": "Manage 85th percentile rainfall event on-site",
+              "3pt": "Manage 90th or 95th percentile (varies by region)"
+            },
+            "status": "gap",
+            "currentValue": "Limited GI",
+            "targetValue": "Manage 85th percentile storm on-site",
+            "progressPct": 20,
+            "actions": [
+              "Install bioswales, rain gardens, or permeable pavement",
+              "Increase canopy to improve rainfall interception (35% rate)"
+            ]
+          },
+          {
+            "id": "SS-C5",
+            "category": "Sustainable Sites",
+            "name": "Heat Island Reduction",
+            "type": "credit",
+            "points": 2,
+            "required": false,
+            "description": "Minimize effects on microclimates and human/wildlife habitats through canopy/materials",
+            "canopyRelevance": "high",
+            "metrics": [
+              "canopy_coverage_pct",
+              "sri_weighted_avg",
+              "green_roof_pct"
+            ],
+            "thresholds": {
+              "nonroof": "Tree canopy within 10yr: ≥ 50% hardscape; or SRI ≥ 29 paving; or combination",
+              "roof": "Vegetated roof ≥ 75%; or SRI-compliant ≥ 75%; or combination"
+            },
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "50% hardscape shaded",
+            "progressPct": 20,
+            "actions": [
+              "Increase canopy coverage to shade ≥50% of hardscape",
+              "Consider strategic tree planting on south and west exposures"
+            ]
+          },
+          {
+            "id": "SS-C6",
+            "category": "Sustainable Sites",
+            "name": "Light Pollution Reduction",
+            "type": "credit",
+            "points": 1,
+            "required": false,
+            "description": "Minimize light trespass, reduce sky-glow, and improve nighttime visibility",
+            "canopyRelevance": "low",
+            "metrics": [
+              "blc_compliance",
+              "uplight_ratio"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "EA-C2",
+            "category": "Energy & Atmosphere",
+            "name": "Optimize Energy Performance",
+            "type": "credit",
+            "points": 18,
+            "required": false,
+            "description": "Reduce energy cost through efficiency measures including passive design",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "energy_cost_reduction_pct",
+              "cooling_load_reduction"
+            ],
+            "thresholds": {
+              "1pt": "6% new / 3% existing energy cost reduction",
+              "18pt": "50% new / 45% existing energy cost reduction"
+            },
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 6,
+          "achieved": 0,
+          "partial": 0,
+          "gaps": 6
+        },
+        "achievableLevel": {
+          "level": "Below minimum",
+          "note": "Additional credits needed across all categories"
+        },
+        "prerequisites": [
+          {
+            "name": "Construction Activity Pollution Prevention",
+            "met": false
+          }
+        ]
+      },
+      "breeam": {
+        "certification": "BREEAM",
+        "organization": "BRE Group (UK)",
+        "credits": [
+          {
+            "id": "LE-01",
+            "category": "Land Use & Ecology",
+            "name": "Site Selection",
+            "type": "credit",
+            "credits": 2,
+            "description": "Encourage use of previously developed and/or contaminated land",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "previously_developed_pct",
+              "contaminated_land_remediation"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "LE-02",
+            "category": "Land Use & Ecology",
+            "name": "Ecological Value of Site and Protection",
+            "type": "credit",
+            "credits": 2,
+            "description": "Assess and protect existing ecological value of the site",
+            "canopyRelevance": "high",
+            "metrics": [
+              "ecological_survey_complete",
+              "protected_features_list",
+              "ecological_value_score"
+            ],
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 33,
+            "actions": []
+          },
+          {
+            "id": "LE-03",
+            "category": "Land Use & Ecology",
+            "name": "Minimising Impact on Existing Site Ecology",
+            "type": "credit",
+            "credits": 2,
+            "description": "Minimize negative impact on existing site ecology",
+            "canopyRelevance": "high",
+            "metrics": [
+              "tree_protection_plan",
+              "root_protection_zones",
+              "canopy_retention_pct"
+            ],
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 33,
+            "actions": []
+          },
+          {
+            "id": "LE-04",
+            "category": "Land Use & Ecology",
+            "name": "Enhancement of Ecological Value",
+            "type": "credit",
+            "credits": 3,
+            "description": "Enhance the ecological value of the site — 10% Biodiversity Net Gain required (2024)",
+            "canopyRelevance": "high",
+            "metrics": [
+              "biodiversity_net_gain_pct",
+              "native_planting_area",
+              "urban_greening_factor"
+            ],
+            "thresholds": {
+              "minimum": "10% Biodiversity Net Gain (BNG) — UK law since Feb 2024",
+              "ugf": "Urban Greening Factor ≥ 0.3 (London planning requirement)",
+              "3credits": "Significant net gain with long-term management plan"
+            },
+            "status": "partial",
+            "currentValue": "3% BNG",
+            "targetValue": "10% Biodiversity Net Gain (minimum)",
+            "progressPct": 30,
+            "actions": [
+              "Need 7% more biodiversity net gain",
+              "Add native species planting and habitat features"
+            ]
+          },
+          {
+            "id": "LE-05",
+            "category": "Land Use & Ecology",
+            "name": "Long-term Biodiversity Management",
+            "type": "credit",
+            "credits": 2,
+            "description": "Long-term management and maintenance of site ecology",
+            "canopyRelevance": "high",
+            "metrics": [
+              "management_plan_years",
+              "monitoring_schedule",
+              "responsible_party"
+            ],
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 33,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 5,
+          "achieved": 0,
+          "partial": 1,
+          "gaps": 4
+        },
+        "achievableLevel": null,
+        "prerequisites": []
+      },
+      "well": {
+        "certification": "WELL v2",
+        "organization": "International WELL Building Institute (IWBI)",
+        "credits": [
+          {
+            "id": "L06",
+            "category": "Light",
+            "name": "Visual Lighting Design",
+            "type": "optimization",
+            "points": 3,
+            "description": "Provide views to nature and daylight access",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "daylight_views_pct",
+              "nature_views_pct"
+            ],
+            "thresholds": {
+              "requirement": "≥ 75% of regularly occupied area has views to nature/outdoors"
+            },
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "M02",
+            "category": "Mind",
+            "name": "Biophilia I — Qualitative",
+            "type": "precondition",
+            "points": 0,
+            "required": true,
+            "description": "Develop a biophilia plan incorporating environmental elements at each design stage",
+            "canopyRelevance": "high",
+            "metrics": [
+              "biophilia_plan_complete",
+              "nature_integration_strategy"
+            ],
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 33,
+            "actions": []
+          },
+          {
+            "id": "M07",
+            "category": "Mind",
+            "name": "Biophilia II — Quantitative",
+            "type": "optimization",
+            "points": 1,
+            "description": "Prescribe visual and physical connection with outdoor nature",
+            "canopyRelevance": "high",
+            "metrics": [
+              "plant_wall_pct_floor_area",
+              "potted_plant_coverage_pct",
+              "outdoor_nature_access"
+            ],
+            "thresholds": {
+              "plantWall": "Plant wall per floor ≥ 2% of floor area (or largest available wall)",
+              "pottedPlants": "Potted plants or planted beds ≥ 1% of floor area per floor",
+              "outdoorSpace": "Outdoor space with nature accessible within 200m of building entrance"
+            },
+            "status": "gap",
+            "currentValue": "Plant wall: 0%, Plants: 0%",
+            "targetValue": "Plant wall ≥2% floor area; Potted plants ≥1% floor area",
+            "progressPct": 0,
+            "actions": [
+              "Install plant wall covering ≥2% of floor area per floor",
+              "Add potted plants covering ≥1% of floor area per floor"
+            ]
+          },
+          {
+            "id": "A05",
+            "category": "Air",
+            "name": "Enhanced Air Quality",
+            "type": "optimization",
+            "points": 2,
+            "description": "Improve outdoor air quality through green infrastructure",
+            "canopyRelevance": "high",
+            "metrics": [
+              "pm25_reduction_pct",
+              "voc_filtration",
+              "outdoor_air_quality_monitoring"
+            ],
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 33,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 4,
+          "achieved": 0,
+          "partial": 0,
+          "gaps": 4
+        },
+        "achievableLevel": null,
+        "prerequisites": [
+          {
+            "name": "Biophilia I — Qualitative",
+            "met": false
+          }
+        ]
+      },
+      "greenGlobes": {
+        "certification": "Green Globes",
+        "organization": "Green Building Initiative (GBI)",
+        "credits": [
+          {
+            "id": "SITE-1",
+            "category": "Site",
+            "name": "Site Selection",
+            "type": "credit",
+            "points": 50,
+            "description": "Encourage selection of previously developed sites, brownfield redevelopment",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "previously_developed",
+              "brownfield",
+              "proximity_to_transit"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "SITE-2",
+            "category": "Site",
+            "name": "Site Development & Ecological Enhancement",
+            "type": "credit",
+            "points": 75,
+            "description": "Protect and restore natural features, minimize site disturbance",
+            "canopyRelevance": "high",
+            "metrics": [
+              "natural_feature_protection_pct",
+              "native_species_ratio",
+              "canopy_coverage_target"
+            ],
+            "thresholds": {
+              "erosionControl": "Erosion and sediment control during construction",
+              "nativePlanting": "≥ 50% of landscaped area with native/adapted species",
+              "canopy": "Tree canopy target for site based on climate zone"
+            },
+            "status": "gap",
+            "currentValue": "10% canopy",
+            "targetValue": "50% hardscape shaded",
+            "progressPct": 20,
+            "actions": [
+              "Increase canopy coverage to shade ≥50% of hardscape",
+              "Consider strategic tree planting on south and west exposures"
+            ]
+          },
+          {
+            "id": "SITE-3",
+            "category": "Site",
+            "name": "Stormwater Management",
+            "type": "credit",
+            "points": 60,
+            "description": "Manage stormwater through green infrastructure and LID techniques",
+            "canopyRelevance": "high",
+            "metrics": [
+              "runoff_managed_pct",
+              "permeable_surface_pct",
+              "bioswale_area"
+            ],
+            "status": "gap",
+            "currentValue": "Limited GI",
+            "targetValue": "Manage 85th percentile storm on-site",
+            "progressPct": 20,
+            "actions": [
+              "Install bioswales, rain gardens, or permeable pavement",
+              "Increase canopy to improve rainfall interception (35% rate)"
+            ]
+          },
+          {
+            "id": "ENERGY-1",
+            "category": "Energy",
+            "name": "Energy Performance",
+            "type": "credit",
+            "points": 200,
+            "description": "Reduce energy consumption including passive cooling from vegetation",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "energy_reduction_pct",
+              "passive_cooling_contribution"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 4,
+          "achieved": 0,
+          "partial": 0,
+          "gaps": 4
+        },
+        "achievableLevel": null,
+        "prerequisites": []
+      }
+    },
+    "mid": {
+      "leed": {
+        "certification": "LEED v4.1",
+        "organization": "U.S. Green Building Council (USGBC)",
+        "credits": [
+          {
+            "id": "SS-P1",
+            "category": "Sustainable Sites",
+            "name": "Construction Activity Pollution Prevention",
+            "type": "prerequisite",
+            "points": 0,
+            "required": true,
+            "description": "Erosion and sedimentation control plan for all construction activities",
+            "canopyRelevance": "high",
+            "metrics": [
+              "erosion_control_plan",
+              "sediment_barriers",
+              "stabilization_timeline"
+            ],
+            "status": "achieved",
+            "currentValue": "Plan in place",
+            "targetValue": "Erosion & sediment control plan required",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "SS-C2",
+            "category": "Sustainable Sites",
+            "name": "Site Development — Protect or Restore Habitat",
+            "type": "credit",
+            "points": 2,
+            "required": false,
+            "description": "Conserve existing natural areas and restore damaged areas with native/adapted vegetation",
+            "canopyRelevance": "high",
+            "metrics": [
+              "native_vegetation_pct",
+              "restored_area_sqft",
+              "greenfield_protection_pct"
+            ],
+            "thresholds": {
+              "option1": "Protect/restore ≥ 40% of site (excl. building footprint) with native vegetation",
+              "option2": "Provide $0.40/sqft for off-site habitat protection via accredited land trust"
+            },
+            "status": "achieved",
+            "currentValue": "30% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "SS-C4",
+            "category": "Sustainable Sites",
+            "name": "Rainwater Management",
+            "type": "credit",
+            "points": 3,
+            "required": false,
+            "description": "Manage on-site rainwater to reduce runoff volume and improve water quality",
+            "canopyRelevance": "high",
+            "metrics": [
+              "percentile_storm_managed",
+              "runoff_volume_reduction_pct",
+              "gi_area_sqft"
+            ],
+            "thresholds": {
+              "1pt": "Manage 80th percentile rainfall event on-site",
+              "2pt": "Manage 85th percentile rainfall event on-site",
+              "3pt": "Manage 90th or 95th percentile (varies by region)"
+            },
+            "status": "partial",
+            "currentValue": "Green infrastructure present",
+            "targetValue": "Manage 85th percentile storm on-site",
+            "progressPct": 60,
+            "actions": []
+          },
+          {
+            "id": "SS-C5",
+            "category": "Sustainable Sites",
+            "name": "Heat Island Reduction",
+            "type": "credit",
+            "points": 2,
+            "required": false,
+            "description": "Minimize effects on microclimates and human/wildlife habitats through canopy/materials",
+            "canopyRelevance": "high",
+            "metrics": [
+              "canopy_coverage_pct",
+              "sri_weighted_avg",
+              "green_roof_pct"
+            ],
+            "thresholds": {
+              "nonroof": "Tree canopy within 10yr: ≥ 50% hardscape; or SRI ≥ 29 paving; or combination",
+              "roof": "Vegetated roof ≥ 75%; or SRI-compliant ≥ 75%; or combination"
+            },
+            "status": "partial",
+            "currentValue": "30% canopy",
+            "targetValue": "50% hardscape shaded",
+            "progressPct": 60,
+            "actions": [
+              "Increase canopy coverage to shade ≥50% of hardscape",
+              "Consider strategic tree planting on south and west exposures"
+            ]
+          },
+          {
+            "id": "SS-C6",
+            "category": "Sustainable Sites",
+            "name": "Light Pollution Reduction",
+            "type": "credit",
+            "points": 1,
+            "required": false,
+            "description": "Minimize light trespass, reduce sky-glow, and improve nighttime visibility",
+            "canopyRelevance": "low",
+            "metrics": [
+              "blc_compliance",
+              "uplight_ratio"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "EA-C2",
+            "category": "Energy & Atmosphere",
+            "name": "Optimize Energy Performance",
+            "type": "credit",
+            "points": 18,
+            "required": false,
+            "description": "Reduce energy cost through efficiency measures including passive design",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "energy_cost_reduction_pct",
+              "cooling_load_reduction"
+            ],
+            "thresholds": {
+              "1pt": "6% new / 3% existing energy cost reduction",
+              "18pt": "50% new / 45% existing energy cost reduction"
+            },
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 6,
+          "achieved": 2,
+          "partial": 2,
+          "gaps": 2
+        },
+        "achievableLevel": {
+          "level": "Certified",
+          "estimatedTotal": 40,
+          "greenInfraContribution": 5,
+          "note": "Estimated with 35 points from non-site categories (conservative)"
+        },
+        "prerequisites": [
+          {
+            "name": "Construction Activity Pollution Prevention",
+            "met": true
+          }
+        ]
+      },
+      "breeam": {
+        "certification": "BREEAM",
+        "organization": "BRE Group (UK)",
+        "credits": [
+          {
+            "id": "LE-01",
+            "category": "Land Use & Ecology",
+            "name": "Site Selection",
+            "type": "credit",
+            "credits": 2,
+            "description": "Encourage use of previously developed and/or contaminated land",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "previously_developed_pct",
+              "contaminated_land_remediation"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "LE-02",
+            "category": "Land Use & Ecology",
+            "name": "Ecological Value of Site and Protection",
+            "type": "credit",
+            "credits": 2,
+            "description": "Assess and protect existing ecological value of the site",
+            "canopyRelevance": "high",
+            "metrics": [
+              "ecological_survey_complete",
+              "protected_features_list",
+              "ecological_value_score"
+            ],
+            "status": "achieved",
+            "currentValue": "30% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "LE-03",
+            "category": "Land Use & Ecology",
+            "name": "Minimising Impact on Existing Site Ecology",
+            "type": "credit",
+            "credits": 2,
+            "description": "Minimize negative impact on existing site ecology",
+            "canopyRelevance": "high",
+            "metrics": [
+              "tree_protection_plan",
+              "root_protection_zones",
+              "canopy_retention_pct"
+            ],
+            "status": "achieved",
+            "currentValue": "30% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "LE-04",
+            "category": "Land Use & Ecology",
+            "name": "Enhancement of Ecological Value",
+            "type": "credit",
+            "credits": 3,
+            "description": "Enhance the ecological value of the site — 10% Biodiversity Net Gain required (2024)",
+            "canopyRelevance": "high",
+            "metrics": [
+              "biodiversity_net_gain_pct",
+              "native_planting_area",
+              "urban_greening_factor"
+            ],
+            "thresholds": {
+              "minimum": "10% Biodiversity Net Gain (BNG) — UK law since Feb 2024",
+              "ugf": "Urban Greening Factor ≥ 0.3 (London planning requirement)",
+              "3credits": "Significant net gain with long-term management plan"
+            },
+            "status": "partial",
+            "currentValue": "8% BNG",
+            "targetValue": "10% Biodiversity Net Gain (minimum)",
+            "progressPct": 80,
+            "actions": [
+              "Need 2% more biodiversity net gain",
+              "Add native species planting and habitat features"
+            ]
+          },
+          {
+            "id": "LE-05",
+            "category": "Land Use & Ecology",
+            "name": "Long-term Biodiversity Management",
+            "type": "credit",
+            "credits": 2,
+            "description": "Long-term management and maintenance of site ecology",
+            "canopyRelevance": "high",
+            "metrics": [
+              "management_plan_years",
+              "monitoring_schedule",
+              "responsible_party"
+            ],
+            "status": "achieved",
+            "currentValue": "30% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 5,
+          "achieved": 3,
+          "partial": 1,
+          "gaps": 1
+        },
+        "achievableLevel": null,
+        "prerequisites": []
+      },
+      "well": {
+        "certification": "WELL v2",
+        "organization": "International WELL Building Institute (IWBI)",
+        "credits": [
+          {
+            "id": "L06",
+            "category": "Light",
+            "name": "Visual Lighting Design",
+            "type": "optimization",
+            "points": 3,
+            "description": "Provide views to nature and daylight access",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "daylight_views_pct",
+              "nature_views_pct"
+            ],
+            "thresholds": {
+              "requirement": "≥ 75% of regularly occupied area has views to nature/outdoors"
+            },
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "M02",
+            "category": "Mind",
+            "name": "Biophilia I — Qualitative",
+            "type": "precondition",
+            "points": 0,
+            "required": true,
+            "description": "Develop a biophilia plan incorporating environmental elements at each design stage",
+            "canopyRelevance": "high",
+            "metrics": [
+              "biophilia_plan_complete",
+              "nature_integration_strategy"
+            ],
+            "status": "achieved",
+            "currentValue": "30% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          },
+          {
+            "id": "M07",
+            "category": "Mind",
+            "name": "Biophilia II — Quantitative",
+            "type": "optimization",
+            "points": 1,
+            "description": "Prescribe visual and physical connection with outdoor nature",
+            "canopyRelevance": "high",
+            "metrics": [
+              "plant_wall_pct_floor_area",
+              "potted_plant_coverage_pct",
+              "outdoor_nature_access"
+            ],
+            "thresholds": {
+              "plantWall": "Plant wall per floor ≥ 2% of floor area (or largest available wall)",
+              "pottedPlants": "Potted plants or planted beds ≥ 1% of floor area per floor",
+              "outdoorSpace": "Outdoor space with nature accessible within 200m of building entrance"
+            },
+            "status": "gap",
+            "currentValue": "Plant wall: 1%, Plants: 0.5%",
+            "targetValue": "Plant wall ≥2% floor area; Potted plants ≥1% floor area",
+            "progressPct": 0,
+            "actions": [
+              "Install plant wall covering ≥2% of floor area per floor",
+              "Add potted plants covering ≥1% of floor area per floor"
+            ]
+          },
+          {
+            "id": "A05",
+            "category": "Air",
+            "name": "Enhanced Air Quality",
+            "type": "optimization",
+            "points": 2,
+            "description": "Improve outdoor air quality through green infrastructure",
+            "canopyRelevance": "high",
+            "metrics": [
+              "pm25_reduction_pct",
+              "voc_filtration",
+              "outdoor_air_quality_monitoring"
+            ],
+            "status": "achieved",
+            "currentValue": "30% canopy",
+            "targetValue": "≥30% recommended",
+            "progressPct": 100,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 4,
+          "achieved": 2,
+          "partial": 0,
+          "gaps": 2
+        },
+        "achievableLevel": null,
+        "prerequisites": [
+          {
+            "name": "Biophilia I — Qualitative",
+            "met": true
+          }
+        ]
+      },
+      "greenGlobes": {
+        "certification": "Green Globes",
+        "organization": "Green Building Initiative (GBI)",
+        "credits": [
+          {
+            "id": "SITE-1",
+            "category": "Site",
+            "name": "Site Selection",
+            "type": "credit",
+            "points": 50,
+            "description": "Encourage selection of previously developed sites, brownfield redevelopment",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "previously_developed",
+              "brownfield",
+              "proximity_to_transit"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          },
+          {
+            "id": "SITE-2",
+            "category": "Site",
+            "name": "Site Development & Ecological Enhancement",
+            "type": "credit",
+            "points": 75,
+            "description": "Protect and restore natural features, minimize site disturbance",
+            "canopyRelevance": "high",
+            "metrics": [
+              "natural_feature_protection_pct",
+              "native_species_ratio",
+              "canopy_coverage_target"
+            ],
+            "thresholds": {
+              "erosionControl": "Erosion and sediment control during construction",
+              "nativePlanting": "≥ 50% of landscaped area with native/adapted species",
+              "canopy": "Tree canopy target for site based on climate zone"
+            },
+            "status": "partial",
+            "currentValue": "30% canopy",
+            "targetValue": "50% hardscape shaded",
+            "progressPct": 60,
+            "actions": [
+              "Increase canopy coverage to shade ≥50% of hardscape",
+              "Consider strategic tree planting on south and west exposures"
+            ]
+          },
+          {
+            "id": "SITE-3",
+            "category": "Site",
+            "name": "Stormwater Management",
+            "type": "credit",
+            "points": 60,
+            "description": "Manage stormwater through green infrastructure and LID techniques",
+            "canopyRelevance": "high",
+            "metrics": [
+              "runoff_managed_pct",
+              "permeable_surface_pct",
+              "bioswale_area"
+            ],
+            "status": "partial",
+            "currentValue": "Green infrastructure present",
+            "targetValue": "Manage 85th percentile storm on-site",
+            "progressPct": 60,
+            "actions": []
+          },
+          {
+            "id": "ENERGY-1",
+            "category": "Energy",
+            "name": "Energy Performance",
+            "type": "credit",
+            "points": 200,
+            "description": "Reduce energy consumption including passive cooling from vegetation",
+            "canopyRelevance": "medium",
+            "metrics": [
+              "energy_reduction_pct",
+              "passive_cooling_contribution"
+            ],
+            "status": "gap",
+            "currentValue": null,
+            "targetValue": null,
+            "progressPct": 0,
+            "actions": []
+          }
+        ],
+        "summary": {
+          "totalCreditsAssessed": 4,
+          "achieved": 0,
+          "partial": 2,
+          "gaps": 2
+        },
+        "achievableLevel": null,
+        "prerequisites": []
+      }
+    }
+  },
+  "landValuation": [
+    {
+      "input": {
+        "lotSizeSqFt": 15000,
+        "assessedValue": 120000,
+        "state": "GA",
+        "canopyPct": 30,
+        "buildingSqFt": 2200,
+        "yearBuilt": 2005,
+        "propertyType": "singleFamily"
+      },
+      "output": {
+        "report": "P&X Land Valuation Report",
+        "version": "1.0.0",
+        "dataQuality": {
+          "hasRealComparables": false,
+          "hasRealIncome": false,
+          "syntheticDataUsed": true,
+          "warnings": [
+            "Sales Comparison uses synthetic comparables — not real transactions",
+            "Income approach uses estimated GPI (6.5% of market value) — not actual rental data"
+          ]
+        },
+        "subject": {
+          "lotSizeSqFt": 15000,
+          "lotAcres": 0.344,
+          "buildingSqFt": 2200,
+          "yearBuilt": 2005,
+          "effectiveAge": 21,
+          "propertyType": "singleFamily",
+          "zoning": "R-1",
+          "canopyPct": 30,
+          "assessedValue": 120000,
+          "estimatedMarketValue": 300000
+        },
+        "valuation": {
+          "reconciledValue": 247036,
+          "valueRange": {
+            "low": 209981,
+            "high": 284091,
+            "confidenceInterval": "70%"
+          },
+          "weights": {
+            "salesComparison": 0.55,
+            "income": 0.2,
+            "cost": 0.25
+          },
+          "approachValues": {
+            "salesComparison": 229190,
+            "incomeCapitalization": 227251,
+            "costApproach": 302125
+          },
+          "spread": {
+            "amount": 74874,
+            "pct": 30.31,
+            "assessment": "Wide — further analysis recommended"
+          },
+          "methodology": "Three-approach reconciliation per USPAP Standard 1-6. Weights assigned by property type and data quality, consistent with JLL Valuation Advisory and Appraisal Institute (MAI) practice.",
+          "disclaimer": "This analysis is a research-backed estimate using institutional methodology. It does not constitute a certified appraisal under USPAP. For lending, litigation, or tax purposes, engage a licensed appraiser (MAI/SRA)."
+        },
+        "approaches": {
+          "salesComparison": {
+            "approach": "Sales Comparison",
+            "indicatedValue": 229190,
+            "usingSyntheticComps": true,
+            "adjustedComparables": [
+              {
+                "address": "Comparable 1 — Larger lot, slightly less canopy",
+                "salePrice": 207000,
+                "saleDate": "2026-02-19",
+                "adjustedPrice": 205937,
+                "totalAdjustmentPct": -0.51,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": -0.011999999999999999
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": 0.006
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": -0.0085
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.009362680683311432
+                  }
+                ],
+                "pricePerSqFt": 92,
+                "adjustedPricePerSqFt": 91,
+                "weight": 0.24,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 2 — Smaller lot, newer, more canopy",
+                "salePrice": 236250,
+                "saleDate": "2025-12-21",
+                "adjustedPrice": 241968,
+                "totalAdjustmentPct": 2.42,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": 0.0075
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": 0.0051
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.015604467805519053
+                  }
+                ],
+                "pricePerSqFt": 119,
+                "adjustedPricePerSqFt": 122,
+                "weight": 0.2,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 3 — Similar property, slight size difference",
+                "salePrice": 220500,
+                "saleDate": "2025-10-22",
+                "adjustedPrice": 225097,
+                "totalAdjustmentPct": 2.08,
+                "adjustments": [
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.021846254927726676
+                  }
+                ],
+                "pricePerSqFt": 100,
+                "adjustedPricePerSqFt": 102,
+                "weight": 0.21,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 4 — Smaller lot, newer build, premium canopy",
+                "salePrice": 243000,
+                "saleDate": "2025-08-23",
+                "adjustedPrice": 255074,
+                "totalAdjustmentPct": 4.97,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": 0.018
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": -0.01
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": 0.013600000000000001
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.028088042049934297
+                  }
+                ],
+                "pricePerSqFt": 101,
+                "adjustedPricePerSqFt": 106,
+                "weight": 0.15,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 5 — Larger lot, older build",
+                "salePrice": 213750,
+                "saleDate": "2025-06-24",
+                "adjustedPrice": 218288,
+                "totalAdjustmentPct": 2.12,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": -0.018
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": 0.01
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": -0.0051
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.03432982917214192
+                  }
+                ],
+                "pricePerSqFt": 89,
+                "adjustedPricePerSqFt": 91,
+                "weight": 0.21,
+                "isSynthetic": true
+              }
+            ],
+            "statistics": {
+              "low": 205937,
+              "high": 255074,
+              "mean": 229273,
+              "median": 225097
+            },
+            "confidence": "demo",
+            "methodology": "USPAP-compliant paired sales analysis with market-derived adjustments. Canopy premium per Netusil et al. 2014. Time adjustments per FHFA HPI (long-term avg).",
+            "syntheticDisclaimer": "Comparables were generated from subject property data for demonstration purposes. These are NOT real transactions. For accurate valuation, provide actual comparable sales."
+          },
+          "incomeCapitalization": {
+            "approach": "Income Capitalization",
+            "directCapitalization": {
+              "indicatedValue": 235773,
+              "noi": 12968,
+              "capRate": 0.055,
+              "capRateRange": {
+                "low": 0.04,
+                "mid": 0.055,
+                "high": 0.07,
+                "source": "Estimated range based on CBRE/JLL survey data"
+              },
+              "impliedCapRate": null
+            },
+            "dcfAnalysis": {
+              "indicatedValue": 227251,
+              "discountRate": 0.085,
+              "holdingPeriodYears": 10,
+              "annualRentGrowth": 0.03,
+              "annualExpenseGrowth": 0.025,
+              "terminalCapRate": 0.06,
+              "pvCashFlows": 96431,
+              "reversionValue": 295782,
+              "pvReversion": 130820,
+              "cashFlows": [
+                {
+                  "year": 1,
+                  "gpi": 19500,
+                  "egi": 18525,
+                  "opex": 5558,
+                  "noi": 12968,
+                  "pvFactor": 0.9217,
+                  "pvCashFlow": 11952
+                },
+                {
+                  "year": 2,
+                  "gpi": 20085,
+                  "egi": 19081,
+                  "opex": 5696,
+                  "noi": 13384,
+                  "pvFactor": 0.8495,
+                  "pvCashFlow": 11369
+                },
+                {
+                  "year": 3,
+                  "gpi": 20688,
+                  "egi": 19653,
+                  "opex": 5839,
+                  "noi": 13814,
+                  "pvFactor": 0.7829,
+                  "pvCashFlow": 10815
+                },
+                {
+                  "year": 4,
+                  "gpi": 21308,
+                  "egi": 20243,
+                  "opex": 5985,
+                  "noi": 14258,
+                  "pvFactor": 0.7216,
+                  "pvCashFlow": 10288
+                },
+                {
+                  "year": 5,
+                  "gpi": 21947,
+                  "egi": 20850,
+                  "opex": 6134,
+                  "noi": 14716,
+                  "pvFactor": 0.665,
+                  "pvCashFlow": 9787
+                },
+                {
+                  "year": 6,
+                  "gpi": 22606,
+                  "egi": 21476,
+                  "opex": 6288,
+                  "noi": 15188,
+                  "pvFactor": 0.6129,
+                  "pvCashFlow": 9309
+                },
+                {
+                  "year": 7,
+                  "gpi": 23284,
+                  "egi": 22120,
+                  "opex": 6445,
+                  "noi": 15675,
+                  "pvFactor": 0.5649,
+                  "pvCashFlow": 8855
+                },
+                {
+                  "year": 8,
+                  "gpi": 23983,
+                  "egi": 22783,
+                  "opex": 6606,
+                  "noi": 16177,
+                  "pvFactor": 0.5207,
+                  "pvCashFlow": 8423
+                },
+                {
+                  "year": 9,
+                  "gpi": 24702,
+                  "egi": 23467,
+                  "opex": 6771,
+                  "noi": 16696,
+                  "pvFactor": 0.4799,
+                  "pvCashFlow": 8012
+                },
+                {
+                  "year": 10,
+                  "gpi": 25443,
+                  "egi": 24171,
+                  "opex": 6941,
+                  "noi": 17230,
+                  "pvFactor": 0.4423,
+                  "pvCashFlow": 7621
+                }
+              ]
+            },
+            "incomeMetrics": {
+              "grossPotentialIncome": 19500,
+              "effectiveGrossIncome": 18525,
+              "operatingExpenses": 5558,
+              "netOperatingIncome": 12968,
+              "operatingExpenseRatio": 0.3,
+              "grossRentMultiplier": 12.09,
+              "netIncomeMultiplier": 18.18,
+              "debtCoverageRatio": 0.85
+            },
+            "methodology": "USPAP Standards 1 & 2. Direct cap per Appraisal Institute methodology. DCF with explicit cash flow projection, market-derived discount rates, and terminal cap reversion. Cap rate benchmarks from JLL/CBRE 2024 surveys.",
+            "incomeEstimated": true,
+            "incomeDisclaimer": "Gross potential income was estimated from market value (6.5% GRM). For accurate income analysis, provide actual rental income data."
+          },
+          "costApproach": {
+            "approach": "Cost",
+            "indicatedValue": 302125,
+            "landValue": {
+              "value": 75000,
+              "perSqFt": 5,
+              "ecosystemPremium": 3825,
+              "ecosystemPremiumPct": 5.1,
+              "method": "Extraction from assessed value"
+            },
+            "improvements": {
+              "replacementCostNew": 385000,
+              "costPerSqFt": 175,
+              "buildingSqFt": 2200,
+              "depreciation": {
+                "physical": {
+                  "amount": 161700,
+                  "pct": 42
+                },
+                "functional": {
+                  "amount": 0,
+                  "pct": 0,
+                  "level": "noDeficiency"
+                },
+                "external": {
+                  "amount": 0,
+                  "pct": 0,
+                  "level": "none"
+                },
+                "total": 161700,
+                "totalPct": 42
+              },
+              "depreciatedValue": 223300
+            },
+            "siteImprovements": 0,
+            "methodology": "USPAP-compliant cost approach. RCN from RS Means 2024 Southeast. Age-life depreciation per Marshall Valuation Service. Ecosystem land premium per Netusil/Kovacs (P&X TerraValue methodology)."
+          }
+        },
+        "highestAndBestUse": {
+          "analysis": "Highest and Best Use",
+          "tests": {
+            "legallyPermissible": {
+              "zoning": "R-1",
+              "permissibleUses": [
+                "single-family residential",
+                "conservation/open space"
+              ],
+              "constraints": [],
+              "pass": true
+            },
+            "physicallyPossible": {
+              "lotSizeSqFt": 15000,
+              "lotAcres": 0.344,
+              "topography": "level",
+              "floodZone": "X",
+              "utilities": true,
+              "roadAccess": true,
+              "constraints": [],
+              "score": 100,
+              "pass": true
+            },
+            "financiallyFeasible": {
+              "usesAnalyzed": [
+                {
+                  "use": "single-family residential",
+                  "estimatedDevelopmentValue": 1050000,
+                  "estimatedDevelopmentCost": 918750,
+                  "residualLandValue": 131250,
+                  "estimatedAnnualIncome": 57750,
+                  "buildableSqFt": 5250,
+                  "feasible": true
+                },
+                {
+                  "use": "conservation/open space",
+                  "estimatedDevelopmentValue": 0,
+                  "estimatedDevelopmentCost": 0,
+                  "residualLandValue": 4140,
+                  "estimatedAnnualIncome": 207,
+                  "note": "Value derived from capitalized ecosystem services",
+                  "feasible": true
+                }
+              ],
+              "feasibleCount": 2,
+              "pass": true
+            },
+            "maximallyProductive": {
+              "recommendedUse": "single-family residential",
+              "estimatedValue": 131250,
+              "annualIncome": 57750,
+              "pass": true
+            }
+          },
+          "ecosystemConsideration": {
+            "currentAnnualValue": 207,
+            "capitalizedValue": 4140,
+            "canopyPct": 30,
+            "note": "Current canopy generates ~$207/yr in ecosystem services (capitalized value: $4,140). HBU analysis should weigh this against development returns."
+          },
+          "conclusion": "Highest and best use as single-family residential. Current use may not represent HBU.",
+          "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
+        },
+        "ecosystemServices": {
+          "annualValue": 21207,
+          "services": {
+            "carbon": {
+              "value": 51,
+              "label": "Carbon Sequestration",
+              "ratePerCanopyAcre": 494,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+              "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+              "co2PerAcre": 2.6,
+              "socialCostCarbon": 190
+            },
+            "stormwater": {
+              "value": 54,
+              "label": "Stormwater Management",
+              "ratePerCanopyAcre": 520,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+              "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+              "interceptionRate": 0.35,
+              "costPer1000Gal": 4
+            },
+            "airQuality": {
+              "value": 43,
+              "label": "Air Quality Improvement",
+              "ratePerCanopyAcre": 418,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+              "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+              "pm25ValuePerTon": 117106
+            },
+            "energy": {
+              "value": 26,
+              "label": "Energy Savings",
+              "ratePerCanopyAcre": 252,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+              "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+              "kwhPerAcre": 1800,
+              "coolingReductionPct": 0.3,
+              "heatingPenaltyPct": 0.05
+            },
+            "habitat": {
+              "value": 33,
+              "label": "Habitat Value",
+              "ratePerCanopyAcre": 320,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Benefit transfer from ecosystem services valuation literature",
+              "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+              "wtpPerAcre": 320
+            },
+            "propertyPremium": {
+              "value": 21000,
+              "label": "Property Value Premium",
+              "premiumPct": 0.07,
+              "unit": "% of market value",
+              "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+              "source": "Kovacs et al. 2022; Netusil et al. 2014"
+            }
+          },
+          "capitalizedValue": 424140,
+          "valueAddPct": 8.58
+        },
+        "keyMetrics": {
+          "reconciledValue": 247036,
+          "valueRange": {
+            "low": 209981,
+            "high": 284091,
+            "confidenceInterval": "70%"
+          },
+          "pricePerSqFt": 16.47,
+          "pricePerAcre": 717393,
+          "pricePerBuildingSqFt": 112,
+          "capRate": 0.055,
+          "grossRentMultiplier": 12.09,
+          "ecosystemAnnualValue": 21207,
+          "ecosystemPremiumPct": 5.1
+        },
+        "methodology": {
+          "framework": "Three-approach USPAP-compliant valuation with ecosystem overlay",
+          "approaches": [
+            "Sales Comparison (Berkshire Hathaway CMA style)",
+            "Income Capitalization (JLL DCF methodology)",
+            "Cost Approach (Marshall/RS Means)"
+          ],
+          "ecosystemIntegration": "P&X TerraValue engine — peer-reviewed canopy premium coefficients",
+          "sources": [
+            "Appraisal Institute — The Appraisal of Real Estate, 15th Ed.",
+            "USPAP 2024-2025 Edition (The Appraisal Foundation)",
+            "JLL Valuation Advisory — Cap Rate Survey 2024",
+            "CBRE North America Cap Rate Survey H2 2024",
+            "RS Means Building Construction Cost Data 2024 (Southeast)",
+            "Marshall Valuation Service — Depreciation Tables",
+            "FHFA House Price Index — Atlanta-Sandy Springs-Roswell MSA",
+            "Netusil et al. 2014 — Implicit value of tree cover (meta-analysis). DOI: 10.1016/j.ecolecon.2016.04.018",
+            "Kovacs et al. 2022 — Tree cover and property values (national)"
+          ],
+          "disclaimer": "This analysis is a research-backed estimate using institutional methodology. It does not constitute a certified appraisal under USPAP. For lending, litigation, or tax purposes, engage a licensed appraiser (MAI/SRA)."
+        }
+      }
+    },
+    {
+      "input": {
+        "lotSizeSqFt": 43560,
+        "assessedValue": 400000,
+        "state": "GA",
+        "canopyPct": 15,
+        "buildingSqFt": 5000,
+        "yearBuilt": 1990,
+        "propertyType": "singleFamily",
+        "zoning": "R-1"
+      },
+      "output": {
+        "report": "P&X Land Valuation Report",
+        "version": "1.0.0",
+        "dataQuality": {
+          "hasRealComparables": false,
+          "hasRealIncome": false,
+          "syntheticDataUsed": true,
+          "warnings": [
+            "Sales Comparison uses synthetic comparables — not real transactions",
+            "Income approach uses estimated GPI (6.5% of market value) — not actual rental data"
+          ]
+        },
+        "subject": {
+          "lotSizeSqFt": 43560,
+          "lotAcres": 1,
+          "buildingSqFt": 5000,
+          "yearBuilt": 1990,
+          "effectiveAge": 36,
+          "propertyType": "singleFamily",
+          "zoning": "R-1",
+          "canopyPct": 15,
+          "assessedValue": 400000,
+          "estimatedMarketValue": 1000000
+        },
+        "valuation": {
+          "reconciledValue": 642910,
+          "valueRange": {
+            "low": 546474,
+            "high": 739347,
+            "confidenceInterval": "70%"
+          },
+          "weights": {
+            "salesComparison": 0.55,
+            "income": 0.2,
+            "cost": 0.25
+          },
+          "approachValues": {
+            "salesComparison": 665569,
+            "incomeCapitalization": 757516,
+            "costApproach": 501375
+          },
+          "spread": {
+            "amount": 256141,
+            "pct": 39.84,
+            "assessment": "Wide — further analysis recommended"
+          },
+          "methodology": "Three-approach reconciliation per USPAP Standard 1-6. Weights assigned by property type and data quality, consistent with JLL Valuation Advisory and Appraisal Institute (MAI) practice.",
+          "disclaimer": "This analysis is a research-backed estimate using institutional methodology. It does not constitute a certified appraisal under USPAP. For lending, litigation, or tax purposes, engage a licensed appraiser (MAI/SRA)."
+        },
+        "approaches": {
+          "salesComparison": {
+            "approach": "Sales Comparison",
+            "indicatedValue": 665569,
+            "usingSyntheticComps": true,
+            "adjustedComparables": [
+              {
+                "address": "Comparable 1 — Larger lot, slightly less canopy",
+                "salePrice": 601128,
+                "saleDate": "2026-02-19",
+                "adjustedPrice": 598039,
+                "totalAdjustmentPct": -0.51,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": -0.012000688705234156
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": 0.006
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": -0.0085
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.009362680683311432
+                  }
+                ],
+                "pricePerSqFt": 117,
+                "adjustedPricePerSqFt": 117,
+                "weight": 0.24,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 2 — Smaller lot, newer, more canopy",
+                "salePrice": 686070,
+                "saleDate": "2025-12-21",
+                "adjustedPrice": 702676,
+                "totalAdjustmentPct": 2.42,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": 0.0075
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": 0.0051
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.015604467805519053
+                  }
+                ],
+                "pricePerSqFt": 152,
+                "adjustedPricePerSqFt": 156,
+                "weight": 0.2,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 3 — Similar property, slight size difference",
+                "salePrice": 640332,
+                "saleDate": "2025-10-22",
+                "adjustedPrice": 653681,
+                "totalAdjustmentPct": 2.08,
+                "adjustments": [
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.021846254927726676
+                  }
+                ],
+                "pricePerSqFt": 127,
+                "adjustedPricePerSqFt": 130,
+                "weight": 0.21,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 4 — Smaller lot, newer build, premium canopy",
+                "salePrice": 705672,
+                "saleDate": "2025-08-23",
+                "adjustedPrice": 740735,
+                "totalAdjustmentPct": 4.97,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": 0.01799931129476584
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": -0.01
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": 0.013600000000000001
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.028088042049934297
+                  }
+                ],
+                "pricePerSqFt": 129,
+                "adjustedPricePerSqFt": 135,
+                "weight": 0.15,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 5 — Larger lot, older build",
+                "salePrice": 620730,
+                "saleDate": "2025-06-24",
+                "adjustedPrice": 633908,
+                "totalAdjustmentPct": 2.12,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": -0.01799931129476584
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": 0.01
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": -0.0051
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.03432982917214192
+                  }
+                ],
+                "pricePerSqFt": 114,
+                "adjustedPricePerSqFt": 116,
+                "weight": 0.21,
+                "isSynthetic": true
+              }
+            ],
+            "statistics": {
+              "low": 598039,
+              "high": 740735,
+              "mean": 665808,
+              "median": 653681
+            },
+            "confidence": "demo",
+            "methodology": "USPAP-compliant paired sales analysis with market-derived adjustments. Canopy premium per Netusil et al. 2014. Time adjustments per FHFA HPI (long-term avg).",
+            "syntheticDisclaimer": "Comparables were generated from subject property data for demonstration purposes. These are NOT real transactions. For accurate valuation, provide actual comparable sales."
+          },
+          "incomeCapitalization": {
+            "approach": "Income Capitalization",
+            "directCapitalization": {
+              "indicatedValue": 785909,
+              "noi": 43225,
+              "capRate": 0.055,
+              "capRateRange": {
+                "low": 0.04,
+                "mid": 0.055,
+                "high": 0.07,
+                "source": "Estimated range based on CBRE/JLL survey data"
+              },
+              "impliedCapRate": null
+            },
+            "dcfAnalysis": {
+              "indicatedValue": 757516,
+              "discountRate": 0.085,
+              "holdingPeriodYears": 10,
+              "annualRentGrowth": 0.03,
+              "annualExpenseGrowth": 0.025,
+              "terminalCapRate": 0.06,
+              "pvCashFlows": 321437,
+              "reversionValue": 985968,
+              "pvReversion": 436079,
+              "cashFlows": [
+                {
+                  "year": 1,
+                  "gpi": 65000,
+                  "egi": 61750,
+                  "opex": 18525,
+                  "noi": 43225,
+                  "pvFactor": 0.9217,
+                  "pvCashFlow": 39839
+                },
+                {
+                  "year": 2,
+                  "gpi": 66950,
+                  "egi": 63603,
+                  "opex": 18988,
+                  "noi": 44614,
+                  "pvFactor": 0.8495,
+                  "pvCashFlow": 37898
+                },
+                {
+                  "year": 3,
+                  "gpi": 68959,
+                  "egi": 65511,
+                  "opex": 19463,
+                  "noi": 46048,
+                  "pvFactor": 0.7829,
+                  "pvCashFlow": 36051
+                },
+                {
+                  "year": 4,
+                  "gpi": 71027,
+                  "egi": 67476,
+                  "opex": 19949,
+                  "noi": 47526,
+                  "pvFactor": 0.7216,
+                  "pvCashFlow": 34294
+                },
+                {
+                  "year": 5,
+                  "gpi": 73158,
+                  "egi": 69500,
+                  "opex": 20448,
+                  "noi": 49052,
+                  "pvFactor": 0.665,
+                  "pvCashFlow": 32622
+                },
+                {
+                  "year": 6,
+                  "gpi": 75353,
+                  "egi": 71585,
+                  "opex": 20959,
+                  "noi": 50626,
+                  "pvFactor": 0.6129,
+                  "pvCashFlow": 31031
+                },
+                {
+                  "year": 7,
+                  "gpi": 77613,
+                  "egi": 73733,
+                  "opex": 21483,
+                  "noi": 52249,
+                  "pvFactor": 0.5649,
+                  "pvCashFlow": 29517
+                },
+                {
+                  "year": 8,
+                  "gpi": 79942,
+                  "egi": 75945,
+                  "opex": 22020,
+                  "noi": 53924,
+                  "pvFactor": 0.5207,
+                  "pvCashFlow": 28077
+                },
+                {
+                  "year": 9,
+                  "gpi": 82340,
+                  "egi": 78223,
+                  "opex": 22571,
+                  "noi": 55652,
+                  "pvFactor": 0.4799,
+                  "pvCashFlow": 26706
+                },
+                {
+                  "year": 10,
+                  "gpi": 84810,
+                  "egi": 80570,
+                  "opex": 23135,
+                  "noi": 57435,
+                  "pvFactor": 0.4423,
+                  "pvCashFlow": 25402
+                }
+              ]
+            },
+            "incomeMetrics": {
+              "grossPotentialIncome": 65000,
+              "effectiveGrossIncome": 61750,
+              "operatingExpenses": 18525,
+              "netOperatingIncome": 43225,
+              "operatingExpenseRatio": 0.3,
+              "grossRentMultiplier": 12.09,
+              "netIncomeMultiplier": 18.18,
+              "debtCoverageRatio": 0.85
+            },
+            "methodology": "USPAP Standards 1 & 2. Direct cap per Appraisal Institute methodology. DCF with explicit cash flow projection, market-derived discount rates, and terminal cap reversion. Cap rate benchmarks from JLL/CBRE 2024 surveys.",
+            "incomeEstimated": true,
+            "incomeDisclaimer": "Gross potential income was estimated from market value (6.5% GRM). For accurate income analysis, provide actual rental income data."
+          },
+          "costApproach": {
+            "approach": "Cost",
+            "indicatedValue": 501375,
+            "landValue": {
+              "value": 250000,
+              "perSqFt": 5.74,
+              "ecosystemPremium": 6375,
+              "ecosystemPremiumPct": 2.55,
+              "method": "Extraction from assessed value"
+            },
+            "improvements": {
+              "replacementCostNew": 875000,
+              "costPerSqFt": 175,
+              "buildingSqFt": 5000,
+              "depreciation": {
+                "physical": {
+                  "amount": 630000,
+                  "pct": 72
+                },
+                "functional": {
+                  "amount": 0,
+                  "pct": 0,
+                  "level": "noDeficiency"
+                },
+                "external": {
+                  "amount": 0,
+                  "pct": 0,
+                  "level": "none"
+                },
+                "total": 630000,
+                "totalPct": 72
+              },
+              "depreciatedValue": 245000
+            },
+            "siteImprovements": 0,
+            "methodology": "USPAP-compliant cost approach. RCN from RS Means 2024 Southeast. Age-life depreciation per Marshall Valuation Service. Ecosystem land premium per Netusil/Kovacs (P&X TerraValue methodology)."
+          }
+        },
+        "highestAndBestUse": {
+          "analysis": "Highest and Best Use",
+          "tests": {
+            "legallyPermissible": {
+              "zoning": "R-1",
+              "permissibleUses": [
+                "single-family residential",
+                "conservation/open space"
+              ],
+              "constraints": [],
+              "pass": true
+            },
+            "physicallyPossible": {
+              "lotSizeSqFt": 43560,
+              "lotAcres": 1,
+              "topography": "level",
+              "floodZone": "X",
+              "utilities": true,
+              "roadAccess": true,
+              "constraints": [],
+              "score": 100,
+              "pass": true
+            },
+            "financiallyFeasible": {
+              "usesAnalyzed": [
+                {
+                  "use": "single-family residential",
+                  "estimatedDevelopmentValue": 3049200,
+                  "estimatedDevelopmentCost": 2668050,
+                  "residualLandValue": 381150,
+                  "estimatedAnnualIncome": 167706,
+                  "buildableSqFt": 15246,
+                  "feasible": true
+                },
+                {
+                  "use": "conservation/open space",
+                  "estimatedDevelopmentValue": 0,
+                  "estimatedDevelopmentCost": 0,
+                  "residualLandValue": 6020,
+                  "estimatedAnnualIncome": 301,
+                  "note": "Value derived from capitalized ecosystem services",
+                  "feasible": true
+                }
+              ],
+              "feasibleCount": 2,
+              "pass": true
+            },
+            "maximallyProductive": {
+              "recommendedUse": "single-family residential",
+              "estimatedValue": 381150,
+              "annualIncome": 167706,
+              "pass": true
+            }
+          },
+          "ecosystemConsideration": {
+            "currentAnnualValue": 301,
+            "capitalizedValue": 6020,
+            "canopyPct": 15,
+            "note": "Current canopy generates ~$301/yr in ecosystem services (capitalized value: $6,020). HBU analysis should weigh this against development returns."
+          },
+          "conclusion": "Highest and best use as single-family residential. Current use may not represent HBU.",
+          "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
+        },
+        "ecosystemServices": {
+          "annualValue": 35301,
+          "services": {
+            "carbon": {
+              "value": 74,
+              "label": "Carbon Sequestration",
+              "ratePerCanopyAcre": 494,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+              "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+              "co2PerAcre": 2.6,
+              "socialCostCarbon": 190
+            },
+            "stormwater": {
+              "value": 78,
+              "label": "Stormwater Management",
+              "ratePerCanopyAcre": 520,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+              "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+              "interceptionRate": 0.35,
+              "costPer1000Gal": 4
+            },
+            "airQuality": {
+              "value": 63,
+              "label": "Air Quality Improvement",
+              "ratePerCanopyAcre": 418,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+              "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+              "pm25ValuePerTon": 117106
+            },
+            "energy": {
+              "value": 38,
+              "label": "Energy Savings",
+              "ratePerCanopyAcre": 252,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+              "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+              "kwhPerAcre": 1800,
+              "coolingReductionPct": 0.3,
+              "heatingPenaltyPct": 0.05
+            },
+            "habitat": {
+              "value": 48,
+              "label": "Habitat Value",
+              "ratePerCanopyAcre": 320,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Benefit transfer from ecosystem services valuation literature",
+              "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+              "wtpPerAcre": 320
+            },
+            "propertyPremium": {
+              "value": 35000,
+              "label": "Property Value Premium",
+              "premiumPct": 0.07,
+              "unit": "% of market value",
+              "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+              "source": "Kovacs et al. 2022; Netusil et al. 2014"
+            }
+          },
+          "capitalizedValue": 706020,
+          "valueAddPct": 5.49
+        },
+        "keyMetrics": {
+          "reconciledValue": 642910,
+          "valueRange": {
+            "low": 546474,
+            "high": 739347,
+            "confidenceInterval": "70%"
+          },
+          "pricePerSqFt": 14.76,
+          "pricePerAcre": 642910,
+          "pricePerBuildingSqFt": 129,
+          "capRate": 0.055,
+          "grossRentMultiplier": 12.09,
+          "ecosystemAnnualValue": 35301,
+          "ecosystemPremiumPct": 2.55
+        },
+        "methodology": {
+          "framework": "Three-approach USPAP-compliant valuation with ecosystem overlay",
+          "approaches": [
+            "Sales Comparison (Berkshire Hathaway CMA style)",
+            "Income Capitalization (JLL DCF methodology)",
+            "Cost Approach (Marshall/RS Means)"
+          ],
+          "ecosystemIntegration": "P&X TerraValue engine — peer-reviewed canopy premium coefficients",
+          "sources": [
+            "Appraisal Institute — The Appraisal of Real Estate, 15th Ed.",
+            "USPAP 2024-2025 Edition (The Appraisal Foundation)",
+            "JLL Valuation Advisory — Cap Rate Survey 2024",
+            "CBRE North America Cap Rate Survey H2 2024",
+            "RS Means Building Construction Cost Data 2024 (Southeast)",
+            "Marshall Valuation Service — Depreciation Tables",
+            "FHFA House Price Index — Atlanta-Sandy Springs-Roswell MSA",
+            "Netusil et al. 2014 — Implicit value of tree cover (meta-analysis). DOI: 10.1016/j.ecolecon.2016.04.018",
+            "Kovacs et al. 2022 — Tree cover and property values (national)"
+          ],
+          "disclaimer": "This analysis is a research-backed estimate using institutional methodology. It does not constitute a certified appraisal under USPAP. For lending, litigation, or tax purposes, engage a licensed appraiser (MAI/SRA)."
+        }
+      }
+    },
+    {
+      "input": {
+        "lotSizeSqFt": 87120,
+        "assessedValue": 800000,
+        "state": "GA",
+        "canopyPct": 40,
+        "buildingSqFt": 10000,
+        "yearBuilt": 2015,
+        "propertyType": "singleFamily",
+        "zoning": "MU-1"
+      },
+      "output": {
+        "report": "P&X Land Valuation Report",
+        "version": "1.0.0",
+        "dataQuality": {
+          "hasRealComparables": false,
+          "hasRealIncome": false,
+          "syntheticDataUsed": true,
+          "warnings": [
+            "Sales Comparison uses synthetic comparables — not real transactions",
+            "Income approach uses estimated GPI (6.5% of market value) — not actual rental data"
+          ]
+        },
+        "subject": {
+          "lotSizeSqFt": 87120,
+          "lotAcres": 2,
+          "buildingSqFt": 10000,
+          "yearBuilt": 2015,
+          "effectiveAge": 11,
+          "propertyType": "singleFamily",
+          "zoning": "MU-1",
+          "canopyPct": 40,
+          "assessedValue": 800000,
+          "estimatedMarketValue": 2000000
+        },
+        "valuation": {
+          "reconciledValue": 1509880,
+          "valueRange": {
+            "low": 1283398,
+            "high": 1736362,
+            "confidenceInterval": "70%"
+          },
+          "weights": {
+            "salesComparison": 0.55,
+            "income": 0.2,
+            "cost": 0.25
+          },
+          "approachValues": {
+            "salesComparison": 1331137,
+            "incomeCapitalization": 1515025,
+            "costApproach": 1899000
+          },
+          "spread": {
+            "amount": 567863,
+            "pct": 37.61,
+            "assessment": "Wide — further analysis recommended"
+          },
+          "methodology": "Three-approach reconciliation per USPAP Standard 1-6. Weights assigned by property type and data quality, consistent with JLL Valuation Advisory and Appraisal Institute (MAI) practice.",
+          "disclaimer": "This analysis is a research-backed estimate using institutional methodology. It does not constitute a certified appraisal under USPAP. For lending, litigation, or tax purposes, engage a licensed appraiser (MAI/SRA)."
+        },
+        "approaches": {
+          "salesComparison": {
+            "approach": "Sales Comparison",
+            "indicatedValue": 1331137,
+            "usingSyntheticComps": true,
+            "adjustedComparables": [
+              {
+                "address": "Comparable 1 — Larger lot, slightly less canopy",
+                "salePrice": 1202256,
+                "saleDate": "2026-02-19",
+                "adjustedPrice": 1196079,
+                "totalAdjustmentPct": -0.51,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": -0.012000688705234156
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": 0.006
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": -0.0085
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.009362680683311432
+                  }
+                ],
+                "pricePerSqFt": 117,
+                "adjustedPricePerSqFt": 117,
+                "weight": 0.24,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 2 — Smaller lot, newer, more canopy",
+                "salePrice": 1372140,
+                "saleDate": "2025-12-21",
+                "adjustedPrice": 1405352,
+                "totalAdjustmentPct": 2.42,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": 0.0075
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": 0.0051
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.015604467805519053
+                  }
+                ],
+                "pricePerSqFt": 152,
+                "adjustedPricePerSqFt": 156,
+                "weight": 0.2,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 3 — Similar property, slight size difference",
+                "salePrice": 1280664,
+                "saleDate": "2025-10-22",
+                "adjustedPrice": 1307362,
+                "totalAdjustmentPct": 2.08,
+                "adjustments": [
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.021846254927726676
+                  }
+                ],
+                "pricePerSqFt": 127,
+                "adjustedPricePerSqFt": 130,
+                "weight": 0.21,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 4 — Smaller lot, newer build, premium canopy",
+                "salePrice": 1411344,
+                "saleDate": "2025-08-23",
+                "adjustedPrice": 1481470,
+                "totalAdjustmentPct": 4.97,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": 0.01799931129476584
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": -0.01
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": 0.013600000000000001
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.028088042049934297
+                  }
+                ],
+                "pricePerSqFt": 129,
+                "adjustedPricePerSqFt": 135,
+                "weight": 0.15,
+                "isSynthetic": true
+              },
+              {
+                "address": "Comparable 5 — Larger lot, older build",
+                "salePrice": 1241460,
+                "saleDate": "2025-06-24",
+                "adjustedPrice": 1267817,
+                "totalAdjustmentPct": 2.12,
+                "adjustments": [
+                  {
+                    "factor": "Size",
+                    "pct": -0.01799931129476584
+                  },
+                  {
+                    "factor": "Age",
+                    "pct": 0.01
+                  },
+                  {
+                    "factor": "Canopy coverage (Netusil et al.)",
+                    "pct": -0.0051
+                  },
+                  {
+                    "factor": "Market conditions (time)",
+                    "pct": 0.03432982917214192
+                  }
+                ],
+                "pricePerSqFt": 114,
+                "adjustedPricePerSqFt": 116,
+                "weight": 0.21,
+                "isSynthetic": true
+              }
+            ],
+            "statistics": {
+              "low": 1196079,
+              "high": 1481470,
+              "mean": 1331616,
+              "median": 1307362
+            },
+            "confidence": "demo",
+            "methodology": "USPAP-compliant paired sales analysis with market-derived adjustments. Canopy premium per Netusil et al. 2014. Time adjustments per FHFA HPI (long-term avg).",
+            "syntheticDisclaimer": "Comparables were generated from subject property data for demonstration purposes. These are NOT real transactions. For accurate valuation, provide actual comparable sales."
+          },
+          "incomeCapitalization": {
+            "approach": "Income Capitalization",
+            "directCapitalization": {
+              "indicatedValue": 1571818,
+              "noi": 86450,
+              "capRate": 0.055,
+              "capRateRange": {
+                "low": 0.04,
+                "mid": 0.055,
+                "high": 0.07,
+                "source": "Estimated range based on CBRE/JLL survey data"
+              },
+              "impliedCapRate": null
+            },
+            "dcfAnalysis": {
+              "indicatedValue": 1515025,
+              "discountRate": 0.085,
+              "holdingPeriodYears": 10,
+              "annualRentGrowth": 0.03,
+              "annualExpenseGrowth": 0.025,
+              "terminalCapRate": 0.06,
+              "pvCashFlows": 642874,
+              "reversionValue": 1971918,
+              "pvReversion": 872151,
+              "cashFlows": [
+                {
+                  "year": 1,
+                  "gpi": 130000,
+                  "egi": 123500,
+                  "opex": 37050,
+                  "noi": 86450,
+                  "pvFactor": 0.9217,
+                  "pvCashFlow": 79677
+                },
+                {
+                  "year": 2,
+                  "gpi": 133900,
+                  "egi": 127205,
+                  "opex": 37976,
+                  "noi": 89229,
+                  "pvFactor": 0.8495,
+                  "pvCashFlow": 75796
+                },
+                {
+                  "year": 3,
+                  "gpi": 137917,
+                  "egi": 131021,
+                  "opex": 38926,
+                  "noi": 92095,
+                  "pvFactor": 0.7829,
+                  "pvCashFlow": 72102
+                },
+                {
+                  "year": 4,
+                  "gpi": 142055,
+                  "egi": 134952,
+                  "opex": 39899,
+                  "noi": 95053,
+                  "pvFactor": 0.7216,
+                  "pvCashFlow": 68588
+                },
+                {
+                  "year": 5,
+                  "gpi": 146316,
+                  "egi": 139000,
+                  "opex": 40896,
+                  "noi": 98104,
+                  "pvFactor": 0.665,
+                  "pvCashFlow": 65244
+                },
+                {
+                  "year": 6,
+                  "gpi": 150706,
+                  "egi": 143170,
+                  "opex": 41919,
+                  "noi": 101252,
+                  "pvFactor": 0.6129,
+                  "pvCashFlow": 62062
+                },
+                {
+                  "year": 7,
+                  "gpi": 155227,
+                  "egi": 147465,
+                  "opex": 42967,
+                  "noi": 104499,
+                  "pvFactor": 0.5649,
+                  "pvCashFlow": 59034
+                },
+                {
+                  "year": 8,
+                  "gpi": 159884,
+                  "egi": 151889,
+                  "opex": 44041,
+                  "noi": 107849,
+                  "pvFactor": 0.5207,
+                  "pvCashFlow": 56153
+                },
+                {
+                  "year": 9,
+                  "gpi": 164680,
+                  "egi": 156446,
+                  "opex": 45142,
+                  "noi": 111304,
+                  "pvFactor": 0.4799,
+                  "pvCashFlow": 53413
+                },
+                {
+                  "year": 10,
+                  "gpi": 169621,
+                  "egi": 161139,
+                  "opex": 46270,
+                  "noi": 114869,
+                  "pvFactor": 0.4423,
+                  "pvCashFlow": 50805
+                }
+              ]
+            },
+            "incomeMetrics": {
+              "grossPotentialIncome": 130000,
+              "effectiveGrossIncome": 123500,
+              "operatingExpenses": 37050,
+              "netOperatingIncome": 86450,
+              "operatingExpenseRatio": 0.3,
+              "grossRentMultiplier": 12.09,
+              "netIncomeMultiplier": 18.18,
+              "debtCoverageRatio": 0.85
+            },
+            "methodology": "USPAP Standards 1 & 2. Direct cap per Appraisal Institute methodology. DCF with explicit cash flow projection, market-derived discount rates, and terminal cap reversion. Cap rate benchmarks from JLL/CBRE 2024 surveys.",
+            "incomeEstimated": true,
+            "incomeDisclaimer": "Gross potential income was estimated from market value (6.5% GRM). For accurate income analysis, provide actual rental income data."
+          },
+          "costApproach": {
+            "approach": "Cost",
+            "indicatedValue": 1899000,
+            "landValue": {
+              "value": 500000,
+              "perSqFt": 5.74,
+              "ecosystemPremium": 34000,
+              "ecosystemPremiumPct": 6.8,
+              "method": "Extraction from assessed value"
+            },
+            "improvements": {
+              "replacementCostNew": 1750000,
+              "costPerSqFt": 175,
+              "buildingSqFt": 10000,
+              "depreciation": {
+                "physical": {
+                  "amount": 385000,
+                  "pct": 22
+                },
+                "functional": {
+                  "amount": 0,
+                  "pct": 0,
+                  "level": "noDeficiency"
+                },
+                "external": {
+                  "amount": 0,
+                  "pct": 0,
+                  "level": "none"
+                },
+                "total": 385000,
+                "totalPct": 22
+              },
+              "depreciatedValue": 1365000
+            },
+            "siteImprovements": 0,
+            "methodology": "USPAP-compliant cost approach. RCN from RS Means 2024 Southeast. Age-life depreciation per Marshall Valuation Service. Ecosystem land premium per Netusil/Kovacs (P&X TerraValue methodology)."
+          }
+        },
+        "highestAndBestUse": {
+          "analysis": "Highest and Best Use",
+          "tests": {
+            "legallyPermissible": {
+              "zoning": "MU-1",
+              "permissibleUses": [
+                "commercial/retail",
+                "office",
+                "conservation/open space"
+              ],
+              "constraints": [],
+              "pass": true
+            },
+            "physicallyPossible": {
+              "lotSizeSqFt": 87120,
+              "lotAcres": 2,
+              "topography": "level",
+              "floodZone": "X",
+              "utilities": true,
+              "roadAccess": true,
+              "constraints": [],
+              "score": 100,
+              "pass": true
+            },
+            "financiallyFeasible": {
+              "usesAnalyzed": [
+                {
+                  "use": "office",
+                  "estimatedDevelopmentValue": 11761200,
+                  "estimatedDevelopmentCost": 9801000,
+                  "residualLandValue": 1960200,
+                  "estimatedAnnualIncome": 764478,
+                  "buildableSqFt": 39204,
+                  "feasible": true
+                },
+                {
+                  "use": "commercial/retail",
+                  "estimatedDevelopmentValue": 9583200,
+                  "estimatedDevelopmentCost": 7840800,
+                  "residualLandValue": 1742400,
+                  "estimatedAnnualIncome": 670824,
+                  "buildableSqFt": 34848,
+                  "feasible": true
+                },
+                {
+                  "use": "conservation/open space",
+                  "estimatedDevelopmentValue": 0,
+                  "estimatedDevelopmentCost": 0,
+                  "residualLandValue": 32060,
+                  "estimatedAnnualIncome": 1603,
+                  "note": "Value derived from capitalized ecosystem services",
+                  "feasible": true
+                }
+              ],
+              "feasibleCount": 3,
+              "pass": true
+            },
+            "maximallyProductive": {
+              "recommendedUse": "office",
+              "estimatedValue": 1960200,
+              "annualIncome": 764478,
+              "pass": true
+            }
+          },
+          "ecosystemConsideration": {
+            "currentAnnualValue": 1603,
+            "capitalizedValue": 32060,
+            "canopyPct": 40,
+            "note": "Current canopy generates ~$1,603/yr in ecosystem services (capitalized value: $32,060). HBU analysis should weigh this against development returns."
+          },
+          "conclusion": "Highest and best use as office. Current use may not represent HBU.",
+          "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
+        },
+        "ecosystemServices": {
+          "annualValue": 188270,
+          "services": {
+            "carbon": {
+              "value": 395,
+              "label": "Carbon Sequestration",
+              "ratePerCanopyAcre": 494,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "2.6 t CO2/acre/yr × $190/tonne (EPA SC-GHG 2023, 2% near-term discount rate)",
+              "source": "Atlanta iTree Eco 2014; EPA Social Cost of Greenhouse Gases 2023 (Table ES-1)",
+              "co2PerAcre": 2.6,
+              "socialCostCarbon": 190
+            },
+            "stormwater": {
+              "value": 416,
+              "label": "Stormwater Management",
+              "ratePerCanopyAcre": 520,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Benefit transfer from USDA CUFR / iTree Eco urban canopy valuation literature",
+              "source": "USDA Center for Urban Forestry Research; iTree Eco model outputs",
+              "interceptionRate": 0.35,
+              "costPer1000Gal": 4
+            },
+            "airQuality": {
+              "value": 334,
+              "label": "Air Quality Improvement",
+              "ratePerCanopyAcre": 418,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Total pollutant removal value (PM2.5, O3, NO2, SO2) × BenMAP health valuation",
+              "source": "Nowak et al. 2014; BenMAP-CE (EPA)",
+              "pm25ValuePerTon": 117106
+            },
+            "energy": {
+              "value": 202,
+              "label": "Energy Savings",
+              "ratePerCanopyAcre": 252,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "1,800 kWh avoided/acre/yr × $0.14/kWh (GA Power residential avg)",
+              "source": "McPherson 2003; Atlanta iTree Eco; GA Power avg residential rate",
+              "kwhPerAcre": 1800,
+              "coolingReductionPct": 0.3,
+              "heatingPenaltyPct": 0.05
+            },
+            "habitat": {
+              "value": 256,
+              "label": "Habitat Value",
+              "ratePerCanopyAcre": 320,
+              "unit": "$/canopy-acre/yr",
+              "methodology": "Benefit transfer from ecosystem services valuation literature",
+              "source": "Troy & Wilson 2006; Brander & Koetse 2011 (approximate, benefit transfer)",
+              "wtpPerAcre": 320
+            },
+            "propertyPremium": {
+              "value": 186667,
+              "label": "Property Value Premium",
+              "premiumPct": 0.07,
+              "unit": "% of market value",
+              "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
+              "source": "Kovacs et al. 2022; Netusil et al. 2014"
+            }
+          },
+          "capitalizedValue": 3765400,
+          "valueAddPct": 12.47
+        },
+        "keyMetrics": {
+          "reconciledValue": 1509880,
+          "valueRange": {
+            "low": 1283398,
+            "high": 1736362,
+            "confidenceInterval": "70%"
+          },
+          "pricePerSqFt": 17.33,
+          "pricePerAcre": 754940,
+          "pricePerBuildingSqFt": 151,
+          "capRate": 0.055,
+          "grossRentMultiplier": 12.09,
+          "ecosystemAnnualValue": 188270,
+          "ecosystemPremiumPct": 6.8
+        },
+        "methodology": {
+          "framework": "Three-approach USPAP-compliant valuation with ecosystem overlay",
+          "approaches": [
+            "Sales Comparison (Berkshire Hathaway CMA style)",
+            "Income Capitalization (JLL DCF methodology)",
+            "Cost Approach (Marshall/RS Means)"
+          ],
+          "ecosystemIntegration": "P&X TerraValue engine — peer-reviewed canopy premium coefficients",
+          "sources": [
+            "Appraisal Institute — The Appraisal of Real Estate, 15th Ed.",
+            "USPAP 2024-2025 Edition (The Appraisal Foundation)",
+            "JLL Valuation Advisory — Cap Rate Survey 2024",
+            "CBRE North America Cap Rate Survey H2 2024",
+            "RS Means Building Construction Cost Data 2024 (Southeast)",
+            "Marshall Valuation Service — Depreciation Tables",
+            "FHFA House Price Index — Atlanta-Sandy Springs-Roswell MSA",
+            "Netusil et al. 2014 — Implicit value of tree cover (meta-analysis). DOI: 10.1016/j.ecolecon.2016.04.018",
+            "Kovacs et al. 2022 — Tree cover and property values (national)"
+          ],
+          "disclaimer": "This analysis is a research-backed estimate using institutional methodology. It does not constitute a certified appraisal under USPAP. For lending, litigation, or tax purposes, engage a licensed appraiser (MAI/SRA)."
+        }
+      }
+    }
+  ]
+}
