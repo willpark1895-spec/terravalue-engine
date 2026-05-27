@@ -26,8 +26,6 @@ Requires Node 18 or later.
 
 ## Usage — Node.js
 
-> **Known docs bug (fix in v1.0.1):** the example below references `result.services.carbon.annualValue`. The actual field name on the returned object is `result.services.carbon.value`. The engine itself works correctly — only these README examples are wrong. Tracked for the next release.
-
 ```js
 const TerraValueEngine = require('@phloemxylem/terravalue-engine');
 
@@ -38,8 +36,9 @@ const result = TerraValueEngine.EcosystemServices.calculate({
   state: 'GA',
 });
 
-console.log(result.services.carbon.annualValue);    // → ~$49.40
-console.log(result.services.stormwater.annualValue); // → ~$66.50
+console.log(result.services.carbon.value);     // → 49 (dollars/yr)
+console.log(result.services.stormwater.value); // → 52 (dollars/yr)
+console.log(result.totalAnnual);               // → 81867 (sum + property premium)
 ```
 
 ### Full analysis (orchestrated)

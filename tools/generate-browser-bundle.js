@@ -118,18 +118,54 @@ const indexForBrowser = indexSource
   .replace(/^module\.exports\s*=.*$/gm, '// module.exports stripped for browser bundle')
   .replace(/^module\.exports\.\w+\s*=.*$/gm, '// named export stripped for browser bundle');
 
-// In the wrapper, the original code does `class TerraValueEngine extends Engine`
-// — but in the browser the engine class is *itself* called TerraValueEngine.
-// Rename the raw engine to TerraValueEngineRaw before exposing the validated one.
+// Two collision classes the raw engine and the validated wrapper share:
 //
-// Simplest approach: rename the engine's top-level class declaration in
-// engineForBrowser from `class TerraValueEngine` to `class TerraValueEngineRaw`,
-// and update the `module.exports = TerraValueEngine` line (already stripped above).
-// Then in indexForBrowser, change `extends Engine` to `extends TerraValueEngineRaw`.
-const engineRenamed = engineForBrowser.replace(
+//   (1) Top-level class name. Both files end up declaring `TerraValueEngine` at
+//       module scope. We rename the raw engine's class to `TerraValueEngineRaw`,
+//       same as before.
+//
+//   (2) Nested class names. lib/terravalue-engine.js declares EcosystemServices,
+//       LandAppreciation, LandValuation, PropertyValuation, CertificationPathway,
+//       Methodology, SustainabilityValue as standalone top-level classes (then
+//       attaches them as static members of TerraValueEngine). lib/index.js
+//       independently declares `const EcosystemServices = Object.create(...)`
+//       and so on, for the validated facades. In Node these live in separate
+//       module scopes and never see each other. In the concatenated browser
+//       bundle, both end up at the global scope and the `const` declarations
+//       collide with the `class` declarations — SyntaxError on script load.
+//
+// Cleanest fix: wrap the raw engine source in an IIFE that captures all its
+// internal symbols and exports only TerraValueEngineRaw. The nested classes
+// stay reachable through `TerraValueEngineRaw.EcosystemServices` (etc.)
+// because the engine already exposes them as static members. The IIFE means
+// none of the inner names leak to global scope, so the validated wrapper's
+// `const EcosystemServices = ...` declarations have nothing to collide with.
+//
+// History: v1.0.0 of the engine shipped a bundle that worked under Node
+// (where each file gets its own scope) but threw "Cannot declare a const
+// variable twice: 'EcosystemServices'" the first time it was loaded into a
+// real browser, during Phase C of the hub-and-spoke refactor on 2026-05-26.
+// The IIFE wrap below is the v1.0.1 fix.
+
+// First, the existing rename of the top-level class. This still happens so
+// that the wrapper's `extends Engine` (rewritten below) can reach the right
+// thing, AND so that the engine's own `module.exports = TerraValueEngine`
+// (already stripped above) didn't need touching.
+const engineWithRenamedClass = engineForBrowser.replace(
   /\bclass TerraValueEngine\b/g,
   'class TerraValueEngineRaw',
 );
+
+// Now wrap the engine source in an IIFE. The IIFE returns TerraValueEngineRaw,
+// and we assign that to a top-level `var` so the validated wrapper code (which
+// follows in the bundle) can reach it via the existing `Engine.X` rewrite.
+const engineRenamed = [
+  'var TerraValueEngineRaw = (function () {',
+  engineWithRenamedClass,
+  '  return TerraValueEngineRaw;',
+  '})();',
+].join('\n');
+
 const indexRenamed = indexForBrowser.replace(
   /\bextends Engine\b/g,
   'extends TerraValueEngineRaw',
