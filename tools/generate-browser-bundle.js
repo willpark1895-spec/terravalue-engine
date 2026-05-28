@@ -188,11 +188,15 @@ const banner = `/**
  *   window.TerraValueEngineRaw  — raw engine (no validation, for callers that
  *                                 have already validated their input)
  *
- * Also exposes the validator utilities on the validated engine:
+ * Exposes the validator surface as statics on TerraValueEngine
+ * (the full export list of lib/validate.js):
  *   window.TerraValueEngine.ValidationError
  *   window.TerraValueEngine.validateField
  *   window.TerraValueEngine.validateBody
  *   window.TerraValueEngine.pickSchema
+ *   window.TerraValueEngine.SCHEMAS
+ *   window.TerraValueEngine.NUMERIC_SCHEMAS
+ *   window.TerraValueEngine.STRING_SCHEMAS
  */
 `;
 
@@ -200,8 +204,22 @@ const footer = `
 // ─── Browser globals ─────────────────────────────────────────────────────────
 // The IIFE pattern keeps the inlined source's internal variables (class names,
 // helpers) out of the global namespace. Only the two top-level engines and the
-// validator utilities are exposed.
+// validator surface are exposed.
+//
+// The validator's full export list (lib/validate.js's module.exports) is
+// attached as statics on TerraValueEngine so the bundle matches the banner's
+// contract and so browser callers can write \`TerraValueEngine.validateBody(...)\`
+// (and \`instanceof TerraValueEngine.ValidationError\`) the same way Node callers
+// reach the same symbols via \`require('@phloemxylem/terravalue-engine/lib/validate')\`.
 (function attachGlobals() {
+  TerraValueEngine.ValidationError = ValidationError;
+  TerraValueEngine.validateField = validateField;
+  TerraValueEngine.validateBody = validateBody;
+  TerraValueEngine.pickSchema = pickSchema;
+  TerraValueEngine.SCHEMAS = SCHEMAS;
+  TerraValueEngine.NUMERIC_SCHEMAS = NUMERIC_SCHEMAS;
+  TerraValueEngine.STRING_SCHEMAS = STRING_SCHEMAS;
+
   if (typeof window !== 'undefined') {
     window.TerraValueEngine = TerraValueEngine;
     window.TerraValueEngineRaw = TerraValueEngineRaw;
