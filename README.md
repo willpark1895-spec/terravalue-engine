@@ -38,7 +38,8 @@ const result = TerraValueEngine.EcosystemServices.calculate({
 
 console.log(result.services.carbon.value);     // → 49 (dollars/yr)
 console.log(result.services.stormwater.value); // → 52 (dollars/yr)
-console.log(result.totalAnnual);               // → 81867 (sum + property premium)
+console.log(result.totalAnnual);               // → 200 (five recurring services, $/yr)
+console.log(result.propertyPremiumOneTime);    // → 81667 (one-time uplift on market value, NOT in totalAnnual)
 ```
 
 ### Full analysis (orchestrated)

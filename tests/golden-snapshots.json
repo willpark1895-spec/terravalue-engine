@@ -58,6 +58,7 @@
         },
         "propertyPremium": {
           "value": 40833,
+          "oneTime": true,
           "label": "Property Value Premium",
           "premiumPct": 0.07,
           "unit": "% of market value",
@@ -65,7 +66,8 @@
           "source": "Kovacs et al. 2022; Netusil et al. 2014"
         }
       },
-      "totalAnnual": 41534,
+      "totalAnnual": 701,
+      "propertyPremiumOneTime": 40833,
       "parcelMetrics": {
         "lotAcres": 1,
         "canopyAcres": 0.35,
@@ -127,6 +129,7 @@
         },
         "propertyPremium": {
           "value": 39375,
+          "oneTime": true,
           "label": "Property Value Premium",
           "premiumPct": 0.07,
           "unit": "% of market value",
@@ -134,7 +137,8 @@
           "source": "Kovacs et al. 2022; Netusil et al. 2014"
         }
       },
-      "totalAnnual": 39826,
+      "totalAnnual": 451,
+      "propertyPremiumOneTime": 39375,
       "parcelMetrics": {
         "lotAcres": 0.5,
         "canopyAcres": 0.225,
@@ -196,6 +200,7 @@
         },
         "propertyPremium": {
           "value": 58333,
+          "oneTime": true,
           "label": "Property Value Premium",
           "premiumPct": 0.07,
           "unit": "% of market value",
@@ -203,7 +208,8 @@
           "source": "Kovacs et al. 2022; Netusil et al. 2014"
         }
       },
-      "totalAnnual": 59135,
+      "totalAnnual": 802,
+      "propertyPremiumOneTime": 58333,
       "parcelMetrics": {
         "lotAcres": 2,
         "canopyAcres": 0.4,
@@ -265,6 +271,7 @@
         },
         "propertyPremium": {
           "value": 0,
+          "oneTime": true,
           "label": "Property Value Premium",
           "premiumPct": 0.07,
           "unit": "% of market value",
@@ -273,6 +280,7 @@
         }
       },
       "totalAnnual": 0,
+      "propertyPremiumOneTime": 0,
       "parcelMetrics": {
         "lotAcres": 0.23,
         "canopyAcres": 0,
@@ -334,6 +342,7 @@
         },
         "propertyPremium": {
           "value": 90000,
+          "oneTime": true,
           "label": "Property Value Premium",
           "premiumPct": 0.07,
           "unit": "% of market value",
@@ -341,7 +350,8 @@
           "source": "Kovacs et al. 2022; Netusil et al. 2014"
         }
       },
-      "totalAnnual": 91603,
+      "totalAnnual": 1603,
+      "propertyPremiumOneTime": 90000,
       "parcelMetrics": {
         "lotAcres": 1,
         "canopyAcres": 0.8,
@@ -403,6 +413,7 @@
         },
         "propertyPremium": {
           "value": 28000,
+          "oneTime": true,
           "label": "Property Value Premium",
           "premiumPct": 0.07,
           "unit": "% of market value",
@@ -410,7 +421,8 @@
           "source": "Kovacs et al. 2022; Netusil et al. 2014"
         }
       },
-      "totalAnnual": 28413,
+      "totalAnnual": 413,
+      "propertyPremiumOneTime": 28000,
       "parcelMetrics": {
         "lotAcres": 0.689,
         "canopyAcres": 0.207,
@@ -2619,7 +2631,7 @@
           "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
         },
         "ecosystemServices": {
-          "annualValue": 21207,
+          "annualValue": 207,
           "services": {
             "carbon": {
               "value": 51,
@@ -2672,6 +2684,7 @@
             },
             "propertyPremium": {
               "value": 21000,
+              "oneTime": true,
               "label": "Property Value Premium",
               "premiumPct": 0.07,
               "unit": "% of market value",
@@ -2679,8 +2692,9 @@
               "source": "Kovacs et al. 2022; Netusil et al. 2014"
             }
           },
-          "capitalizedValue": 424140,
-          "valueAddPct": 8.58
+          "propertyPremiumOneTime": 21000,
+          "capitalizedValue": 4140,
+          "valueAddPct": 0.08
         },
         "keyMetrics": {
           "reconciledValue": 247036,
@@ -2694,7 +2708,7 @@
           "pricePerBuildingSqFt": 112,
           "capRate": 0.055,
           "grossRentMultiplier": 12.09,
-          "ecosystemAnnualValue": 21207,
+          "ecosystemAnnualValue": 207,
           "ecosystemPremiumPct": 5.1
         },
         "methodology": {
@@ -3159,7 +3173,7 @@
           "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
         },
         "ecosystemServices": {
-          "annualValue": 35301,
+          "annualValue": 301,
           "services": {
             "carbon": {
               "value": 74,
@@ -3212,6 +3226,7 @@
             },
             "propertyPremium": {
               "value": 35000,
+              "oneTime": true,
               "label": "Property Value Premium",
               "premiumPct": 0.07,
               "unit": "% of market value",
@@ -3219,8 +3234,9 @@
               "source": "Kovacs et al. 2022; Netusil et al. 2014"
             }
           },
-          "capitalizedValue": 706020,
-          "valueAddPct": 5.49
+          "propertyPremiumOneTime": 35000,
+          "capitalizedValue": 6020,
+          "valueAddPct": 0.05
         },
         "keyMetrics": {
           "reconciledValue": 642910,
@@ -3234,7 +3250,7 @@
           "pricePerBuildingSqFt": 129,
           "capRate": 0.055,
           "grossRentMultiplier": 12.09,
-          "ecosystemAnnualValue": 35301,
+          "ecosystemAnnualValue": 301,
           "ecosystemPremiumPct": 2.55
         },
         "methodology": {
@@ -3709,7 +3725,7 @@
           "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
         },
         "ecosystemServices": {
-          "annualValue": 188270,
+          "annualValue": 1603,
           "services": {
             "carbon": {
               "value": 395,
@@ -3762,6 +3778,7 @@
             },
             "propertyPremium": {
               "value": 186667,
+              "oneTime": true,
               "label": "Property Value Premium",
               "premiumPct": 0.07,
               "unit": "% of market value",
@@ -3769,8 +3786,9 @@
               "source": "Kovacs et al. 2022; Netusil et al. 2014"
             }
           },
-          "capitalizedValue": 3765400,
-          "valueAddPct": 12.47
+          "propertyPremiumOneTime": 186667,
+          "capitalizedValue": 32060,
+          "valueAddPct": 0.11
         },
         "keyMetrics": {
           "reconciledValue": 1509880,
@@ -3784,7 +3802,7 @@
           "pricePerBuildingSqFt": 151,
           "capRate": 0.055,
           "grossRentMultiplier": 12.09,
-          "ecosystemAnnualValue": 188270,
+          "ecosystemAnnualValue": 1603,
           "ecosystemPremiumPct": 6.8
         },
         "methodology": {

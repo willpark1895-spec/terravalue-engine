@@ -33,14 +33,18 @@ const findNode = (o, pred) => { if (o && typeof o === 'object') { if (pred(o)) r
 const reconOf = (o) => findNode(o, (x) => x && typeof x === 'object' && 'reconciledValue' in x && 'approachValues' in x && 'weights' in x);
 
 describe('Ecosystem — conservation & monotonicity', () => {
-  it('totalAnnual equals the sum of its service components', () => {
+  it('totalAnnual equals the sum of the five recurring flows; the one-time premium is separate', () => {
     for (const lot of [10000, 43560, 87120]) for (const av of [120000, 400000]) for (const st of ['GA', 'CA'])
       for (let c = 0; c <= 100; c += 10) {
         reseed(1);
         const r = Raw.EcosystemServices.calculate({ lotSizeSqFt: lot, canopyPct: c, assessedValue: av, state: st });
         const s = r.services;
-        const sum = s.carbon.value + s.stormwater.value + s.airQuality.value + s.energy.value + s.habitat.value + s.propertyPremium.value;
-        assert.equal(sum, r.totalAnnual, `Σservices != totalAnnual at lot=${lot} av=${av} ${st} c=${c}`);
+        // totalAnnual is the recurring per-year flows ONLY (stock-vs-flow separation, Option A).
+        const flows = s.carbon.value + s.stormwater.value + s.airQuality.value + s.energy.value + s.habitat.value;
+        assert.equal(flows, r.totalAnnual, `Σflows != totalAnnual at lot=${lot} av=${av} ${st} c=${c}`);
+        // The one-time property premium is surfaced separately and excluded from totalAnnual.
+        assert.equal(s.propertyPremium.value, r.propertyPremiumOneTime, `propertyPremiumOneTime mismatch at lot=${lot} av=${av} ${st} c=${c}`);
+        assert.equal(s.propertyPremium.oneTime, true, `propertyPremium not flagged one-time at lot=${lot} av=${av} ${st} c=${c}`);
       }
   });
 

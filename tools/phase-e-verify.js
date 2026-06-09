@@ -118,17 +118,18 @@ check('report.ecosystemServices.annualValue is finite',
   typeof ecoAnnual === 'number' && Number.isFinite(ecoAnnual),
   `got ${ecoAnnual}`);
 
-// Strict math regression check, scoped to ecosystem services. $33,864 is the
-// byte-identical baseline established by Phase D for this exact demo parcel
-// (canopyPct: 32; the May 26 handoff's $33,864 number was also for this
-// parcel — the $289,012 reconciledValue was a different scenario, since the
-// reconciled-value math depends on assessedValue + condition + locationQuality
-// while ecosystem services depend only on canopyPct * lotSize * region).
-// If this number ever drifts, the engine math has regressed — investigate
-// before any publish.
-check('ecosystemServices.annualValue is $33,864 (byte-identical to Phase D)',
-  ecoAnnual === 33864,
+// Strict math regression check, scoped to ecosystem services. After the Option A
+// stock-vs-flow split (2026-06-08), annualValue is the FIVE RECURRING FLOWS ONLY:
+// $264/yr for this demo parcel (canopyPct: 32). The one-time property premium
+// ($33,600) is now reported separately as ecosystemServices.propertyPremiumOneTime;
+// the old combined baseline was $33,864 (= 264 + 33,600). If either number drifts,
+// the engine math has regressed — investigate before any publish.
+check('ecosystemServices.annualValue is $264/yr (recurring flows only, post Option A)',
+  ecoAnnual === 264,
   `got $${ecoAnnual && ecoAnnual.toLocaleString()}`);
+check('ecosystemServices.propertyPremiumOneTime is $33,600 (one-time uplift, post Option A)',
+  !!report && !!report.ecosystemServices && report.ecosystemServices.propertyPremiumOneTime === 33600,
+  `got $${(report && report.ecosystemServices && report.ecosystemServices.propertyPremiumOneTime || 0).toLocaleString()}`);
 
 // Surface the reconciledValue for human spot-check against terravalue.app's
 // live demo output. We don't assert a specific value because the live
@@ -136,7 +137,7 @@ check('ecosystemServices.annualValue is $33,864 (byte-identical to Phase D)',
 if (report) {
   console.log('');
   console.log(`  ℹ reconciledValue (under canopyPct:32 demo): $${(reconciled || 0).toLocaleString()}`);
-  console.log(`  ℹ ecosystemServices.annualValue: $${(ecoAnnual || 0).toLocaleString()}/yr`);
+  console.log(`  ℹ ecosystemServices.annualValue: $${(ecoAnnual || 0).toLocaleString()}/yr (recurring flows; one-time premium reported separately)`);
   console.log('');
 }
 
