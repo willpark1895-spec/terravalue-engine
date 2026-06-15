@@ -1,0 +1,30 @@
+{
+  "_version": "2.0.0",
+  "_description": "TerraValue Soil Score v2 — a 0–100 composite of normalized environmental sub-scores. Definition-agnostic: weights live here, so 'pure stewardship' is just setting walkability/parkAccess weight to 0. Weights are renormalized over whichever sub-scores have real inputs, and confidence reflects input coverage.",
+  "_sources": [
+    "Air quality: WHO 2021 Global Air Quality Guideline (annual PM2.5 = 5 µg/m³); US EPA NAAQS annual PM2.5 = 9 µg/m³ (2024)",
+    "Park access: EnviroAtlas BG metric — % residential population within 500 m of a park entrance (layer 35)",
+    "Walkability: EPA Smart Location Database — National Walkability Index (1–20)",
+    "Canopy: target 40% (Siriwardena/Cho optimal canopy range); matches the engine's legacy canopyPct ÷ 40 × 100 proxy",
+    "Impervious: NLCD percent impervious surface"
+  ],
+  "weights": {
+    "canopy": 0.30,
+    "airQuality": 0.20,
+    "parkAccess": 0.20,
+    "walkability": 0.15,
+    "impervious": 0.15
+  },
+  "subScores": {
+    "canopy":      { "input": "canopyPct",       "method": "linearToTarget", "target": 40,            "label": "Tree canopy" },
+    "airQuality":  { "input": "annualPM25",       "method": "invertRange",    "good": 5, "bad": 20,    "label": "Air quality (annual PM2.5)" },
+    "parkAccess":  { "input": "parkAccessPct",    "method": "identity",                                "label": "Park access (% pop ≤500m)" },
+    "walkability": { "input": "walkabilityIndex", "method": "linearRange",    "min": 1, "max": 20,     "label": "Walkability (NWI)" },
+    "impervious":  { "input": "imperviousPct",    "method": "invertPct",                               "label": "Impervious surface (inverted)" }
+  },
+  "confidence": {
+    "highCoverage": 0.85,
+    "moderateCoverage": 0.6,
+    "_note": "coverage = fraction of total weight backed by real (non-missing) inputs"
+  }
+}

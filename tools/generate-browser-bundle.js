@@ -37,6 +37,7 @@ const CONFIG_FILES = [
   'sustainability-metrics',
   'certifications',
   'land-valuation-constants',
+  'soil-score',
 ];
 
 const configObjects = {};
@@ -68,6 +69,7 @@ const KEY_BY_VAR = {
   SUSTAINABILITY_METRICS: 'sustainability-metrics',
   CERTIFICATIONS: 'certifications',
   LAND_VALUATION_CONSTANTS: 'land-valuation-constants',
+  SOIL_SCORE_CONFIG: 'soil-score',
 };
 
 // Compute the same ECO_SERVICE_TOTAL_PER_ACRE that config/index.js does

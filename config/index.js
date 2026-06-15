@@ -20,6 +20,7 @@ const ECOSYSTEM_SERVICE_RATES = require(path.join(configDir, 'ecosystem-service-
 const SUSTAINABILITY_METRICS = require(path.join(configDir, 'sustainability-metrics.json'));
 const CERTIFICATIONS = require(path.join(configDir, 'certifications.json'));
 const LAND_VALUATION_CONSTANTS = require(path.join(configDir, 'land-valuation-constants.json'));
+const SOIL_SCORE_CONFIG = require(path.join(configDir, 'soil-score.json'));
 
 // Computed: sum of 5 non-property ecosystem service rates (for cross-module use)
 // Validated against hardcoded 2004 in original engine: 494 + 520 + 418 + 252 + 320 = 2004
@@ -37,6 +38,7 @@ const CONFIG_VERSION = [
   SUSTAINABILITY_METRICS._version,
   CERTIFICATIONS._version,
   LAND_VALUATION_CONSTANTS._version,
+  SOIL_SCORE_CONFIG._version,
 ].join('+');
 
 module.exports = {
@@ -47,5 +49,6 @@ module.exports = {
   SUSTAINABILITY_METRICS,
   CERTIFICATIONS,
   LAND_VALUATION_CONSTANTS,
+  SOIL_SCORE_CONFIG,
   ECO_SERVICE_TOTAL_PER_ACRE,
 };
