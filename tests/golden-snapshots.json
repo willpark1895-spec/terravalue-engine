@@ -74,7 +74,7 @@
         "canopyPct": 35,
         "estimatedMarketValue": 500000
       },
-      "methodology": "1.0.0"
+      "methodology": "2.0.0"
     },
     "mountVernon": {
       "services": {
@@ -145,7 +145,7 @@
         "canopyPct": 45,
         "estimatedMarketValue": 375000
       },
-      "methodology": "1.0.0"
+      "methodology": "2.0.0"
     },
     "northRiver": {
       "services": {
@@ -216,7 +216,7 @@
         "canopyPct": 20,
         "estimatedMarketValue": 1250000
       },
-      "methodology": "1.0.0"
+      "methodology": "2.0.0"
     },
     "noCanopy": {
       "services": {
@@ -287,7 +287,7 @@
         "canopyPct": 0,
         "estimatedMarketValue": 200000
       },
-      "methodology": "1.0.0"
+      "methodology": "2.0.0"
     },
     "maxCanopy": {
       "services": {
@@ -358,7 +358,7 @@
         "canopyPct": 80,
         "estimatedMarketValue": 750000
       },
-      "methodology": "1.0.0"
+      "methodology": "2.0.0"
     },
     "nonGA": {
       "services": {
@@ -429,7 +429,7 @@
         "canopyPct": 30,
         "estimatedMarketValue": 400000
       },
-      "methodology": "1.0.0"
+      "methodology": "2.0.0"
     }
   },
   "appreciation": [
@@ -502,7 +502,7 @@
           "withMarketAppreciation": 916687
         },
         "methodology": {
-          "version": "1.0.0",
+          "version": "2.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -581,7 +581,7 @@
           "withMarketAppreciation": 143687
         },
         "methodology": {
-          "version": "1.0.0",
+          "version": "2.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -660,7 +660,7 @@
           "withMarketAppreciation": 140765
         },
         "methodology": {
-          "version": "1.0.0",
+          "version": "2.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -739,7 +739,7 @@
           "withMarketAppreciation": 993888
         },
         "methodology": {
-          "version": "1.0.0",
+          "version": "2.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -2205,7 +2205,7 @@
       },
       "output": {
         "report": "P&X Land Valuation Report",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "dataQuality": {
           "hasRealComparables": false,
           "hasRealIncome": false,
@@ -2747,7 +2747,7 @@
       },
       "output": {
         "report": "P&X Land Valuation Report",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "dataQuality": {
           "hasRealComparables": false,
           "hasRealIncome": false,
@@ -3289,7 +3289,7 @@
       },
       "output": {
         "report": "P&X Land Valuation Report",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "dataQuality": {
           "hasRealComparables": false,
           "hasRealIncome": false,

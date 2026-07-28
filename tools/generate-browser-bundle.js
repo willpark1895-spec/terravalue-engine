@@ -49,7 +49,8 @@ for (const name of CONFIG_FILES) {
 
 // METHODOLOGY_VERSION is declared in config/index.js (not a JSON file)
 // Keep this in sync with config/index.js manually — bump both together.
-const METHODOLOGY_VERSION = '1.0.0';
+// 2.0.0 (2026-07-15): fitted AVM estimator for artifact markets (see config/index.js).
+const METHODOLOGY_VERSION = '2.0.0';
 
 // ─── Step 2: read source files ──────────────────────────────────────────────
 const engineSource = fs.readFileSync(path.join(LIB, 'terravalue-engine.js'), 'utf8');
@@ -115,6 +116,8 @@ const validateForBrowser = validateSource.replace(
 // index.js — strip the `require('./terravalue-engine')` and `require('./validate')`
 // since both will already be in scope from earlier in the bundle.
 const indexForBrowser = indexSource
+  .replace(/\/\/ BROWSER-STRIP-START[\s\S]*?\/\/ BROWSER-STRIP-END/g,
+    '// FittedValuation stripped for browser bundle (server-side only; artifacts load via require)')
   .replace(/const\s+Engine\s*=\s*require\(['"]\.\/terravalue-engine['"]\);?/, '// Engine already in scope from inlined source')
   .replace(/const\s*\{[\s\S]*?\}\s*=\s*require\(['"]\.\/validate['"]\);?/, '// validator symbols already in scope from inlined source')
   .replace(/^module\.exports\s*=.*$/gm, '// module.exports stripped for browser bundle')

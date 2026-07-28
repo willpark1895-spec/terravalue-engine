@@ -10,7 +10,12 @@
 
 const path = require('path');
 
-const METHODOLOGY_VERSION = '1.0.0';
+// 2.0.0 (2026-07-15): AVM estimator for markets with a trained artifact is the
+// fitted ridge hedonic (FittedValuation) — IAAO ratio-study validated (DC:
+// COD 10.5, PRD 1.020, PRB -0.015, median 0.964 on 2025+ holdout, trimmed).
+// salesComparison is demoted to explanation layer for those markets. Soil
+// Score methodology unchanged.
+const METHODOLOGY_VERSION = '2.0.0';
 
 // Load config files relative to this directory
 const configDir = __dirname;
