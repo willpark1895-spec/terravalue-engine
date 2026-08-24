@@ -51,7 +51,7 @@
   ],
   "scripts": {
     "build:browser": "node tools/generate-browser-bundle.js",
-    "test": "node --test tests/golden-parity.test.js tests/test-validation.js tests/invariants.test.js tests/bundle-parity.test.js",
+    "test": "node --test tests/golden-parity.test.js tests/test-validation.js tests/invariants.test.js tests/bundle-parity.test.js tests/soil-score.test.js",
     "test:parity": "node --test tests/golden-parity.test.js",
     "test:validation": "node --test tests/test-validation.js",
     "test:invariants": "node --test tests/invariants.test.js",
