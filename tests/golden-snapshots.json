@@ -1,8 +1,41 @@
 {
   "_meta": {
-    "generatedAt": "2026-05-20T00:00:00.000Z",
-    "engineVersion": "1.0.0",
+    "generatedAt": "2026-08-25T02:21:19.071Z",
+    "engineVersion": "1.4.0",
     "note": "Frozen outputs of lib/terravalue-engine.js across the test fixtures. Future runs assert against these. When intentionally changing engine math, re-run generate-snapshots.js and commit the updated file alongside the change."
+  },
+  "_inputs": {
+    "files": {
+      "canopy-value-coefficients.json": {
+        "sha256": "8ff1e04fd66fbc093a463108982e006dd3d0a8a339f49279a009f9422a50525b",
+        "numericLeaves": 5
+      },
+      "certifications.json": {
+        "sha256": "ed6365ec97db1ae6e62a8f1574c3d0c03c9deebc648eb17e9e6091b9ccf901a3",
+        "numericLeaves": 47
+      },
+      "ecosystem-service-rates.json": {
+        "sha256": "d36a8297eab35fea8910a783ffe79eabd28bf8349953adb2b8ac71137d32ab16",
+        "numericLeaves": 15
+      },
+      "land-valuation-constants.json": {
+        "sha256": "93b73232cbeb132ab7a90c805f47087a217a92d19fd6a69daa3ab9039ee81b45",
+        "numericLeaves": 103
+      },
+      "soil-score.json": {
+        "sha256": "704c8c75a7e7d7d272fa01dfeee3fa9ac3c0ea45451f0e6adff62ec1b4e4fe5d",
+        "numericLeaves": 12
+      },
+      "sustainability-metrics.json": {
+        "sha256": "a01c32bca21092ef96b6fc00308dcf664f644f1f5bddf2ef9101e8fc9a1ef95a",
+        "numericLeaves": 9
+      },
+      "hedonic/dc-1.0.json": {
+        "sha256": "c1271aa6dd03abfd4587ff9fb2867f07371b50c615b5c476932d791497125de9",
+        "numericLeaves": 598
+      }
+    },
+    "totalNumericLeaves": 789
   },
   "ecosystem": {
     "roswell": {
@@ -74,7 +107,7 @@
         "canopyPct": 35,
         "estimatedMarketValue": 500000
       },
-      "methodology": "2.0.0"
+      "methodology": "1.0.0"
     },
     "mountVernon": {
       "services": {
@@ -145,7 +178,7 @@
         "canopyPct": 45,
         "estimatedMarketValue": 375000
       },
-      "methodology": "2.0.0"
+      "methodology": "1.0.0"
     },
     "northRiver": {
       "services": {
@@ -216,7 +249,7 @@
         "canopyPct": 20,
         "estimatedMarketValue": 1250000
       },
-      "methodology": "2.0.0"
+      "methodology": "1.0.0"
     },
     "noCanopy": {
       "services": {
@@ -287,7 +320,7 @@
         "canopyPct": 0,
         "estimatedMarketValue": 200000
       },
-      "methodology": "2.0.0"
+      "methodology": "1.0.0"
     },
     "maxCanopy": {
       "services": {
@@ -358,7 +391,7 @@
         "canopyPct": 80,
         "estimatedMarketValue": 750000
       },
-      "methodology": "2.0.0"
+      "methodology": "1.0.0"
     },
     "nonGA": {
       "services": {
@@ -429,7 +462,7 @@
         "canopyPct": 30,
         "estimatedMarketValue": 400000
       },
-      "methodology": "2.0.0"
+      "methodology": "1.0.0"
     }
   },
   "appreciation": [
@@ -502,7 +535,7 @@
           "withMarketAppreciation": 916687
         },
         "methodology": {
-          "version": "2.0.0",
+          "version": "1.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -581,7 +614,7 @@
           "withMarketAppreciation": 143687
         },
         "methodology": {
-          "version": "2.0.0",
+          "version": "1.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -660,7 +693,7 @@
           "withMarketAppreciation": 140765
         },
         "methodology": {
-          "version": "2.0.0",
+          "version": "1.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -739,7 +772,7 @@
           "withMarketAppreciation": 993888
         },
         "methodology": {
-          "version": "2.0.0",
+          "version": "1.0.0",
           "canopyConversion": "1 Soil Score point ≈ 0.5% canopy coverage change",
           "valueModel": "Netusil et al. 2014 (0.17% property value per 1% canopy, 500m buffer)",
           "diminishingReturns": "Cho et al. 2020 (reduced marginal returns above 40% canopy)",
@@ -2205,7 +2238,7 @@
       },
       "output": {
         "report": "P&X Land Valuation Report",
-        "version": "2.0.0",
+        "version": "1.0.0",
         "dataQuality": {
           "hasRealComparables": false,
           "hasRealIncome": false,
@@ -2747,7 +2780,7 @@
       },
       "output": {
         "report": "P&X Land Valuation Report",
-        "version": "2.0.0",
+        "version": "1.0.0",
         "dataQuality": {
           "hasRealComparables": false,
           "hasRealIncome": false,
@@ -3289,7 +3322,7 @@
       },
       "output": {
         "report": "P&X Land Valuation Report",
-        "version": "2.0.0",
+        "version": "1.0.0",
         "dataQuality": {
           "hasRealComparables": false,
           "hasRealIncome": false,
@@ -3828,5 +3861,277 @@
         }
       }
     }
-  ]
+  ],
+  "fittedValuation": {
+    "baseline": {
+      "estimate": 902565,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "highValueTier": {
+      "estimate": 4558480,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "ward3": {
+      "estimate": 1536637,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "ward7": {
+      "estimate": 345107,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "noCoordinates": {
+      "estimate": 581966,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [
+        "no-coordinates"
+      ],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "unknownGradeAndCondition": {
+      "estimate": 640042,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [
+        "unknown-condition",
+        "unknown-grade"
+      ],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "outsideTrainingCell": {
+      "estimate": 1211263,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [
+        "location-cell-not-in-training"
+      ],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "quarterExtrapolated": {
+      "estimate": 914213,
+      "quarter": "2026Q3",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [
+        "quarter-extrapolated"
+      ],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    },
+    "anchorQuarter": {
+      "estimate": 902565,
+      "quarter": "2024Q4",
+      "market": "dc",
+      "artifactVersion": "1.0.0",
+      "trainedThrough": "2024",
+      "flags": [],
+      "validation": {
+        "holdout": "2025+",
+        "untrimmed": {
+          "n": 4788,
+          "median_ratio": 0.9647,
+          "cod": 12.41,
+          "prd": 1.0392,
+          "prb": -0.0403,
+          "mdape": 9.45
+        },
+        "trimmed": {
+          "n": 4602,
+          "median_ratio": 0.9638,
+          "cod": 10.51,
+          "prd": 1.02,
+          "prb": -0.0153,
+          "mdape": 9.03
+        },
+        "trim_rule": "IAAO extreme-ratio, 1.5*IQR of ln ratios"
+      },
+      "methodology": "Fitted ridge hedonic (log price) with vertical-equity tilt and grade-band quarterly carry index. Trained per market; IAAO ratio-study validated on a temporal holdout. Sales-comparison comps are shown as an explanation layer and do not set this estimate."
+    }
+  }
 }

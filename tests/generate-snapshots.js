@@ -60,6 +60,13 @@ Math.random = () => _rng();
 function resetRng(seed = 1) { _rng = mulberry32(seed); }
 
 const Lib = require('../lib/terravalue-engine');
+const { fingerprint } = require('./config-fingerprint');
+const { SUBJECTS: FITTED_SUBJECTS, OPTIONS: FITTED_OPTIONS } = require('./fitted-fixtures');
+// FittedValuation lives on the package entry point (lib/index.js), not on the raw
+// engine module — index.js is what `require('@phloemxylem/terravalue-engine')` resolves
+// to, so this is the same object the API scores with.
+const Pkg = require('../lib/index.js');
+const PKG = require('../package.json');
 
 // ─── Fixtures (kept identical to golden-parity.test.js) ──────
 
@@ -122,16 +129,25 @@ const stripDates = normalize;
 
 const snapshots = {
   _meta: {
-    generatedAt: new Date().toISOString(),
-    engineVersion: '1.0.0',
+    // Stamped at run time. Previously hardcoded '1.0.0' / '2026-05-20', which
+    // stayed stale across all three commits that touched this file while the
+    // outputs inside carried methodology '2.0.0'. A hand-maintained stamp is a
+    // stamp that lies. (Session A item 7.)
+    generatedAt: new RealDate().toISOString(),
+    engineVersion: PKG.version,
     note: 'Frozen outputs of lib/terravalue-engine.js across the test fixtures. '
         + 'Future runs assert against these. When intentionally changing engine math, '
         + 're-run generate-snapshots.js and commit the updated file alongside the change.',
   },
+  // Fingerprint of every config input the engine consumes. Outputs alone cannot
+  // detect a constant that was edited without moving a fixture. (Session A item 1.)
+  _inputs: fingerprint(),
   ecosystem: {},
   appreciation: [],
   certifications: {},
   landValuation: [],
+  // Session A item 2 — the Gate 1 artifact was previously unguarded.
+  fittedValuation: {},
 };
 
 for (const [name, parcel] of Object.entries(PARCELS)) {
@@ -160,6 +176,21 @@ for (const parcel of FULL_VALUATIONS) {
   });
 }
 
+// FittedValuation is server-side only and does not use Math.random or Date.now,
+// but reset the RNG anyway so ordering changes here can never perturb anything.
+{
+  const artifact = Pkg.FittedValuation.loadArtifact('dc');
+  for (const [name, subject] of Object.entries(FITTED_SUBJECTS)) {
+    resetRng(1);
+    snapshots.fittedValuation[name] = stripDates(Pkg.FittedValuation.estimate(subject, artifact));
+  }
+  for (const [name, cfg] of Object.entries(FITTED_OPTIONS)) {
+    resetRng(1);
+    snapshots.fittedValuation[name] =
+      stripDates(Pkg.FittedValuation.estimate(FITTED_SUBJECTS[cfg.subject], artifact, cfg.options));
+  }
+}
+
 const outPath = path.join(__dirname, 'golden-snapshots.json');
 fs.writeFileSync(outPath, JSON.stringify(snapshots, null, 2));
 
@@ -169,5 +200,8 @@ console.log(`  Ecosystem fixtures:        ${Object.keys(snapshots.ecosystem).len
 console.log(`  Appreciation fixtures:     ${snapshots.appreciation.length}`);
 console.log(`  Certification fixtures:    ${Object.keys(snapshots.certifications).length}`);
 console.log(`  LandValuation fixtures:    ${snapshots.landValuation.length}`);
+console.log(`  FittedValuation fixtures:  ${Object.keys(snapshots.fittedValuation).length}`);
+console.log(`  Config files fingerprinted: ${Object.keys(snapshots._inputs.files).length}`);
+console.log(`  Numeric constants guarded:  ${snapshots._inputs.totalNumericLeaves}`);
 console.log('');
 console.log('Review the JSON before committing. These numbers become regression-test truth.');

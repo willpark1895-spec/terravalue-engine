@@ -174,8 +174,11 @@ npm test
 ```
 
 Runs:
-- `tests/golden-parity.test.js` — 17 snapshot tests covering EcosystemServices, LandAppreciation, CertificationPathway, LandValuation. Snapshots are byte-identical across runs (deterministic via frozen `Date.now()` and seeded `Math.random()`).
+- `tests/golden-parity.test.js` — snapshot tests covering EcosystemServices, LandAppreciation, CertificationPathway, LandValuation. Snapshots are byte-identical across runs (deterministic via frozen `Date.now()` and seeded `Math.random()`).
 - `tests/test-validation.js` — F2 input-validation behavior across every entrypoint.
+- `tests/invariants.test.js` — structural properties: weights sum to 1, monotonicity in canopy, reconciled value inside the approach envelope, no NaN under fuzz.
+- `tests/bundle-parity.test.js` — the browser bundle exposes the same surface as `lib/`.
+- `tests/soil-score.test.js` — Soil Score v2, the path behind `POST /api/score`.
 
 To regenerate snapshots after an intentional math change:
 

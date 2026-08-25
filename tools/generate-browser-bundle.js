@@ -47,10 +47,11 @@ for (const name of CONFIG_FILES) {
   );
 }
 
-// METHODOLOGY_VERSION is declared in config/index.js (not a JSON file)
-// Keep this in sync with config/index.js manually — bump both together.
-// 2.0.0 (2026-07-15): fitted AVM estimator for artifact markets (see config/index.js).
-const METHODOLOGY_VERSION = '2.0.0';
+// Methodology versions are declared in config/index.js (not a JSON file).
+// Previously duplicated here as a literal with a "keep in sync manually" comment.
+// A hand-synced constant is a constant that drifts, so it is now derived from
+// the single source of truth. (Session A item 5.)
+const { METHODOLOGY_VERSION, METHODOLOGY_VERSIONS } = require(path.join(CONFIG_DIR, 'index.js'));
 
 // ─── Step 2: read source files ──────────────────────────────────────────────
 const engineSource = fs.readFileSync(path.join(LIB, 'terravalue-engine.js'), 'utf8');
@@ -86,6 +87,7 @@ const ECO_SERVICE_TOTAL_PER_ACRE =
 const inlineConfigBlock = [
   '// ─── Config (inlined by tools/generate-browser-bundle.js) ───',
   `const METHODOLOGY_VERSION = ${JSON.stringify(METHODOLOGY_VERSION)};`,
+  `const METHODOLOGY_VERSIONS = ${JSON.stringify(METHODOLOGY_VERSIONS)};`,
   `const ECO_SERVICE_TOTAL_PER_ACRE = ${ECO_SERVICE_TOTAL_PER_ACRE};`,
   ...Object.entries(KEY_BY_VAR).map(([varName, fileKey]) => {
     return `const ${varName} = ${JSON.stringify(configObjects[fileKey], null, 2)};`;

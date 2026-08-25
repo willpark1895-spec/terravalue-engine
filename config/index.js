@@ -17,6 +17,23 @@ const path = require('path');
 // Score methodology unchanged.
 const METHODOLOGY_VERSION = '2.0.0';
 
+// Session A item 5 — per-module methodology versions.
+//
+// A single global version cannot describe a multi-module engine. The 2.0.0 bump
+// was made for FittedValuation; it was verified that the ecosystem, appreciation
+// and land-valuation methodologies did NOT change. Under the global version they
+// all silently claimed to have changed, which is a provenance defect: a reader
+// cannot tell which module actually moved.
+//
+// METHODOLOGY_VERSION above is retained as the engine-level umbrella so existing
+// consumers do not break. Per-module reporting reads from here.
+const METHODOLOGY_VERSIONS = Object.freeze({
+  ecosystem:     '1.0.0', // unchanged since inception; verified at the 2.0.0 bump
+  appreciation:  '1.0.0', // unchanged since inception
+  landValuation: '1.0.0', // unchanged since inception
+  fitted:        '2.0.0', // the change the global bump was actually made for
+});
+
 // Load config files relative to this directory
 const configDir = __dirname;
 
@@ -48,6 +65,7 @@ const CONFIG_VERSION = [
 
 module.exports = {
   METHODOLOGY_VERSION,
+  METHODOLOGY_VERSIONS,
   CONFIG_VERSION,
   CANOPY_VALUE_COEFFICIENTS,
   ECOSYSTEM_SERVICE_RATES,
