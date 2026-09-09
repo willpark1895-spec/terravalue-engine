@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-08-27T22:09:52.768Z",
-    "engineVersion": "1.4.0",
+    "generatedAt": "2026-09-09T19:43:42.629Z",
+    "engineVersion": "1.5.0",
     "note": "Frozen outputs of lib/terravalue-engine.js across the test fixtures. Future runs assert against these. When intentionally changing engine math, re-run generate-snapshots.js and commit the updated file alongside the change."
   },
   "_inputs": {
