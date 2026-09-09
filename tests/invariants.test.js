@@ -136,3 +136,38 @@ describe('Regression — /api/valuation schema (getCompositeValue)', () => {
       ValidationError);
   });
 });
+
+// ─── Zoning branch ordering (regression, 2026-08-27) ────────────────────────
+// LandValuation._getZoningUses prefix-matches in source order. The industrial
+// test (M/I/LI/HI) once preceded the mixed-use test (MU/MX/TOD), which made the
+// mixed-use branch unreachable: every 'MU' — including the calculator's own
+// "MU (Mixed Use)" dropdown option — silently returned the industrial use set
+// with residential omitted. Nothing threw and nothing failed; the answer was
+// just wrong. These assertions exist to keep that branch reachable.
+describe('zoning branch ordering', () => {
+  const uses = (z) => Raw.LandValuation._getZoningUses(z);
+
+  it('mixed-use districts permit residential (the MU branch is reachable)', () => {
+    const u = uses('MU');
+    assert.ok(u.includes('multi-family residential'),
+      'MU dropped residential — the M/I industrial branch is shadowing MU again');
+    assert.ok(u.includes('single-family residential'), 'MU dropped single-family');
+    assert.ok(u.includes('commercial/retail'), 'MU dropped commercial');
+  });
+
+  it('MX and TOD behave like MU', () => {
+    for (const z of ['MX', 'TOD']) {
+      assert.ok(uses(z).includes('multi-family residential'), `${z} dropped residential`);
+    }
+  });
+
+  it('genuinely industrial districts still exclude housing', () => {
+    // The known-bad half: fixing MU must not make M-1 permissive.
+    for (const z of ['M-1', 'I-1', 'LI', 'HI']) {
+      const u = uses(z);
+      assert.ok(!u.includes('single-family residential'),
+        `${z} now permits housing — the reorder went too far`);
+      assert.ok(u.includes('commercial/retail'), `${z} lost commercial`);
+    }
+  });
+});

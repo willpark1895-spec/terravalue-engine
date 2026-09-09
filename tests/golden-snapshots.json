@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generatedAt": "2026-08-25T02:21:19.071Z",
+    "generatedAt": "2026-08-27T22:09:52.768Z",
     "engineVersion": "1.4.0",
     "note": "Frozen outputs of lib/terravalue-engine.js across the test fixtures. Future runs assert against these. When intentionally changing engine math, re-run generate-snapshots.js and commit the updated file alongside the change."
   },
@@ -3690,6 +3690,8 @@
             "legallyPermissible": {
               "zoning": "MU-1",
               "permissibleUses": [
+                "single-family residential",
+                "multi-family residential",
                 "commercial/retail",
                 "office",
                 "conservation/open space"
@@ -3711,6 +3713,15 @@
             "financiallyFeasible": {
               "usesAnalyzed": [
                 {
+                  "use": "multi-family residential",
+                  "estimatedDevelopmentValue": 10890000,
+                  "estimatedDevelopmentCost": 8058600,
+                  "residualLandValue": 2831400,
+                  "estimatedAnnualIncome": 707850,
+                  "buildableSqFt": 43560,
+                  "feasible": true
+                },
+                {
                   "use": "office",
                   "estimatedDevelopmentValue": 11761200,
                   "estimatedDevelopmentCost": 9801000,
@@ -3729,6 +3740,15 @@
                   "feasible": true
                 },
                 {
+                  "use": "single-family residential",
+                  "estimatedDevelopmentValue": 6098400,
+                  "estimatedDevelopmentCost": 5336100,
+                  "residualLandValue": 762300,
+                  "estimatedAnnualIncome": 335412,
+                  "buildableSqFt": 30492,
+                  "feasible": true
+                },
+                {
                   "use": "conservation/open space",
                   "estimatedDevelopmentValue": 0,
                   "estimatedDevelopmentCost": 0,
@@ -3738,13 +3758,13 @@
                   "feasible": true
                 }
               ],
-              "feasibleCount": 3,
+              "feasibleCount": 5,
               "pass": true
             },
             "maximallyProductive": {
-              "recommendedUse": "office",
-              "estimatedValue": 1960200,
-              "annualIncome": 764478,
+              "recommendedUse": "multi-family residential",
+              "estimatedValue": 2831400,
+              "annualIncome": 707850,
               "pass": true
             }
           },
@@ -3754,7 +3774,7 @@
             "canopyPct": 40,
             "note": "Current canopy generates ~$1,603/yr in ecosystem services (capitalized value: $32,060). HBU analysis should weigh this against development returns."
           },
-          "conclusion": "Highest and best use as office. Current use may not represent HBU.",
+          "conclusion": "Highest and best use as multi-family residential. Current use may not represent HBU.",
           "methodology": "Four-test HBU analysis per Appraisal Institute standards. Residual land value method for feasibility. Ecosystem services capitalized at 5% discount rate (P&X methodology)."
         },
         "ecosystemServices": {

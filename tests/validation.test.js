@@ -1,5 +1,5 @@
 /**
- * test-validation.js — F2 input-validation behavior across every engine entrypoint.
+ * validation.test.js — F2 input-validation behavior across every engine entrypoint.
  *
  * Defends three layers of behavior:
  *   1. validateField — the single-field rules (number coercion, range checks)

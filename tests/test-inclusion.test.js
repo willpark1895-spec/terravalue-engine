@@ -12,7 +12,9 @@
  *
  * WHY THE TEST SCRIPT STILL USES AN EXPLICIT LIST
  * Both discovery forms were executed against the working tree and both are worse:
- *   node --test tests/*.test.js  -> 48 tests; silently drops test-validation.js
+ *   node --test tests/*.test.js  -> now catches every suite: test-validation.js was
+ *   renamed to validation.test.js on 2026-08-27, closing the gap this guard
+ *   was written to detect.
  *   node --test tests/           -> fails MODULE_NOT_FOUND on generate-snapshots.js
  * So the explicit list stays, and this guard is what keeps it honest.
  */
