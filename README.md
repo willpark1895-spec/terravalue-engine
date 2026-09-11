@@ -42,6 +42,20 @@ console.log(result.totalAnnual);               // → 200 (five recurring servic
 console.log(result.propertyPremiumOneTime);    // → 81667 (one-time uplift on market value, NOT in totalAnnual)
 ```
 
+**Property premium fields (1.6.0+).** The premium is the literature rate scaled by canopy —
+linear in `canopyPct / 30`, capped at 12% — so the response reports both rates:
+
+| Field | Meaning |
+|---|---|
+| `premiumPct` | the rate that produced `value`. `Math.round(estimatedMarketValue * premiumPct) === value` holds for every input (guarded in `tests/invariants.test.js`). |
+| `basePremiumPct` | the unscaled literature rate (0.07, Kovacs 2022) — the rate at 30% canopy. |
+| `premiumCapped` | true when the scaled rate hit the 12% cap. |
+
+Before 1.6.0, `premiumPct` reported the unscaled constant next to a scaled dollar value, so
+`value` could not be reproduced from the payload. No dollar figure changed in 1.6.0 — only the
+reported rate. Consumers that displayed `premiumPct` as "the green premium" will now show the
+parcel's applied rate; read `basePremiumPct` if the literature constant is what you want.
+
 ### Full analysis (orchestrated)
 
 ```js

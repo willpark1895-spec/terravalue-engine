@@ -48,6 +48,27 @@ describe('Ecosystem — conservation & monotonicity', () => {
       }
   });
 
+  // Added 2026-09-11: the response echoed the config's 0.07 next to a value computed at
+  // up to 12%, so a consumer reading premiumPct off the payload could not reproduce the
+  // dollar figure sitting beside it. Found on the live /api/ecosystem response, not here.
+  it('premiumPct reports the rate that produced the value, and the base rate is still published', () => {
+    const MAX = 0.12;
+    for (const lot of [10000, 43560, 87120]) for (const av of [120000, 400000]) for (const st of ['GA', 'CA'])
+      for (let c = 0; c <= 100; c += 5) {
+        reseed(1);
+        const r = Raw.EcosystemServices.calculate({ lotSizeSqFt: lot, canopyPct: c, assessedValue: av, state: st });
+        const p = r.services.propertyPremium;
+        const basis = r.parcelMetrics.estimatedMarketValue;
+        assert.equal(Math.round(basis * p.premiumPct), p.value,
+          `value not reproducible from premiumPct at lot=${lot} av=${av} ${st} c=${c}`);
+        assert.equal(p.basePremiumPct, 0.07, `base rate not published at c=${c}`);
+        assert.ok(p.premiumPct <= MAX + 1e-9, `applied rate above the ${MAX} cap at c=${c}: ${p.premiumPct}`);
+        assert.equal(p.premiumCapped, p.basePremiumPct * (c / 30) > MAX + 1e-12,
+          `premiumCapped wrong at c=${c} (applied ${p.premiumPct})`);
+        if (c === 30) assert.equal(p.premiumPct, p.basePremiumPct, 'applied rate should equal the base rate at 30% canopy');
+      }
+  });
+
   it('value is non-decreasing as canopy rises (other inputs fixed)', () => {
     for (const lot of [10000, 43560, 87120]) for (const av of [120000, 400000]) for (const st of ['GA', 'CA']) {
       let prev = -Infinity;

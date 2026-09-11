@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "generatedAt": "2026-09-09T19:43:42.629Z",
-    "engineVersion": "1.5.0",
+    "generatedAt": "2026-09-11T23:35:34.589Z",
+    "engineVersion": "1.6.0",
     "note": "Frozen outputs of lib/terravalue-engine.js across the test fixtures. Future runs assert against these. When intentionally changing engine math, re-run generate-snapshots.js and commit the updated file alongside the change."
   },
   "_inputs": {
@@ -93,10 +93,13 @@
           "value": 40833,
           "oneTime": true,
           "label": "Property Value Premium",
-          "premiumPct": 0.07,
+          "premiumPct": 0.081666666667,
           "unit": "% of market value",
           "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+          "source": "Kovacs et al. 2022; Netusil et al. 2014",
+          "basePremiumPct": 0.07,
+          "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+          "premiumCapped": false
         }
       },
       "totalAnnual": 701,
@@ -164,10 +167,13 @@
           "value": 39375,
           "oneTime": true,
           "label": "Property Value Premium",
-          "premiumPct": 0.07,
+          "premiumPct": 0.105,
           "unit": "% of market value",
           "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+          "source": "Kovacs et al. 2022; Netusil et al. 2014",
+          "basePremiumPct": 0.07,
+          "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+          "premiumCapped": false
         }
       },
       "totalAnnual": 451,
@@ -235,10 +241,13 @@
           "value": 58333,
           "oneTime": true,
           "label": "Property Value Premium",
-          "premiumPct": 0.07,
+          "premiumPct": 0.046666666667,
           "unit": "% of market value",
           "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+          "source": "Kovacs et al. 2022; Netusil et al. 2014",
+          "basePremiumPct": 0.07,
+          "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+          "premiumCapped": false
         }
       },
       "totalAnnual": 802,
@@ -306,10 +315,13 @@
           "value": 0,
           "oneTime": true,
           "label": "Property Value Premium",
-          "premiumPct": 0.07,
+          "premiumPct": 0,
           "unit": "% of market value",
           "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+          "source": "Kovacs et al. 2022; Netusil et al. 2014",
+          "basePremiumPct": 0.07,
+          "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+          "premiumCapped": false
         }
       },
       "totalAnnual": 0,
@@ -377,10 +389,13 @@
           "value": 90000,
           "oneTime": true,
           "label": "Property Value Premium",
-          "premiumPct": 0.07,
+          "premiumPct": 0.12,
           "unit": "% of market value",
           "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+          "source": "Kovacs et al. 2022; Netusil et al. 2014",
+          "basePremiumPct": 0.07,
+          "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+          "premiumCapped": true
         }
       },
       "totalAnnual": 1603,
@@ -451,7 +466,10 @@
           "premiumPct": 0.07,
           "unit": "% of market value",
           "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-          "source": "Kovacs et al. 2022; Netusil et al. 2014"
+          "source": "Kovacs et al. 2022; Netusil et al. 2014",
+          "basePremiumPct": 0.07,
+          "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+          "premiumCapped": false
         }
       },
       "totalAnnual": 413,
@@ -2722,7 +2740,10 @@
               "premiumPct": 0.07,
               "unit": "% of market value",
               "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-              "source": "Kovacs et al. 2022; Netusil et al. 2014"
+              "source": "Kovacs et al. 2022; Netusil et al. 2014",
+              "basePremiumPct": 0.07,
+              "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+              "premiumCapped": false
             }
           },
           "propertyPremiumOneTime": 21000,
@@ -3261,10 +3282,13 @@
               "value": 35000,
               "oneTime": true,
               "label": "Property Value Premium",
-              "premiumPct": 0.07,
+              "premiumPct": 0.035,
               "unit": "% of market value",
               "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-              "source": "Kovacs et al. 2022; Netusil et al. 2014"
+              "source": "Kovacs et al. 2022; Netusil et al. 2014",
+              "basePremiumPct": 0.07,
+              "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+              "premiumCapped": false
             }
           },
           "propertyPremiumOneTime": 35000,
@@ -3833,10 +3857,13 @@
               "value": 186667,
               "oneTime": true,
               "label": "Property Value Premium",
-              "premiumPct": 0.07,
+              "premiumPct": 0.093333333333,
               "unit": "% of market value",
               "methodology": "~7% premium for mature canopy coverage (meta-analysis, approximate)",
-              "source": "Kovacs et al. 2022; Netusil et al. 2014"
+              "source": "Kovacs et al. 2022; Netusil et al. 2014",
+              "basePremiumPct": 0.07,
+              "premiumScaling": "linear in canopyPct / 30, capped at maxPremiumPct",
+              "premiumCapped": false
             }
           },
           "propertyPremiumOneTime": 186667,
